@@ -1,0 +1,31 @@
+body{
+    background-image: url("images/bg.png");
+    color: inherit;
+}
+.jumbotron{
+    background-image: url("images/bg.png");
+    text-align: center;
+    color: inherit;
+
+}
+.logomagic{
+    height: 100px;
+}
+.logocasajeux{
+    height: 60px;
+    float: left;
+}
+h1{
+    font-family: "Bitstream Charter";
+    margin-top: 50px;
+    color: white !important;
+    font-weight: bold;
+}
+.imgcouleurs{
+    height: 200px;
+}
+.colorname{
+    font-family: "Bitstream Charter";
+    font-weight: normal;
+    text-decoration-line: underline;
+}

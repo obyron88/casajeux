@@ -1,0 +1,9 @@
+<template name="couleurs">
+    {{>header}}
+    <div class="jumbotron">
+    {{#each couleurs}}
+    <h1 class="colorname">{{name}}</h1>
+    <img class="imgcouleurs" src="/images/{{image}}">
+    {{/each}}
+    </div>
+</template>
