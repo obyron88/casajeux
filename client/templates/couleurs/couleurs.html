@@ -2,8 +2,9 @@
     {{>header}}
     <div class="jumbotron">
     {{#each couleurs}}
-    <h1 class="colorname">{{name}}</h1>
-    <img class="imgcouleurs" src="/images/{{image}}">
+            <a href="/couleurs/{{name}}"><img class="imgcouleurs" src="/images/{{image}}"></a>
+
     {{/each}}
+
     </div>
 </template>

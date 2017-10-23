@@ -1,0 +1,20 @@
+<template name="multicolore">
+    <div class="jumbotron">
+        <div class="row">
+            <img src="/images/multi.png">
+            <form class="formu" method="post">
+                {{#each multicolore}}
+
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <h3><b><u>{{name}}</u></b></h3>
+                    <h2>{{price}}€</h2>
+                    <img class="imgblanc" src="/images/{{image}}"><br>
+                    <input class="inputcompt" name="countitem" type="number" min="0" max="99" value="0"><br>
+                </div>
+                {{/each}}
+                <input class="commander" type="submit" name="commander" value="Valider !">
+            </form>
+            <a href="{{pathFor route='couleurs'}}" class="retour">Retour</a>
+        </div>
+    </div>
+</template>

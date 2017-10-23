@@ -25,7 +25,70 @@ h1{
     height: 200px;
 }
 .colorname{
-    font-family: "Bitstream Charter";
-    font-weight: normal;
-    text-decoration-line: underline;
+    background: -webkit-linear-gradient(black, grey, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-family: Menlo;
+    font-weight: bold;
+}
+h3{
+    color: white;
+}
+h2{
+    color: gold;
+}
+.imgblanc{
+    height: 300px;
+}
+.inputcompt{
+    color: white;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background: -moz-linear-gradient(red, black);
+    font-weight: bold;
+    /*kacsart fait tt décaler en plein écran*/
+    font-family: KacstArt;
+}
+.commander {
+    color: #ececec;
+    text-align: center;
+    height: 30px;
+    border: brown;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: -moz-linear-gradient(darkorange, saddlebrown, saddlebrown, black);
+    font-weight: bold;
+    font-family: Dingbats;
+}
+.commander:hover {
+    color: black;
+}
+.retour{
+    color: gold;
+    text-align: center;
+    padding: 5px;
+    border: black;
+    border-radius: 5px;
+    text-decoration: none;
+    background: -moz-linear-gradient(black, dimgrey, dimgrey, black);
+    font-weight: bold;
+    /*kacsart fait tt décaler en plein écran*/
+    font-family: Dingbats;
+}
+.retour:hover{
+    color: orange;
+}
+.panier{
+    height: 50px;
+}
+.compteurpanier{
+    color: yellow;
 }
