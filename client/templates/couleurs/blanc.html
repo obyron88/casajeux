@@ -2,18 +2,21 @@
     <div class="jumbotron">
         <div class="row">
             <img src="/images/blanc.png">
-            <form class="formu" method="post">
+            <div>{{>panier}}</div>
     {{#each blanc}}
+            <form class="formu" method="post">
                 <div class="col-xs-12 col-sm-12 col-md-4">
-        <h3><b><u>{{name}}</u></b></h3>
+        <h3><u>{{name}}</u></h3>
         <h2>{{price}}€</h2>
         <img class="imgblanc" src="/images/{{image}}"><br>
-        <input class="inputcompt" name="countitem" type="number" min="0" max="99" value="0"><br>
-            </div>
+                    <span class="stock">En stock: {{stock}}</span>
+                    <br>
+        <input class="inputcompt" name="countitem" type="number" min="0" max="{{stock}}" value="0"><br>
+                    <input class="commander" type="submit" name="commander" value="Valider !">
+                </div>
+            </form>
     {{/each}}
-                <input class="commander" type="submit" name="commander" value="Valider !">
-    </form>
-    <a href="{{pathFor route='couleurs'}}" class="retour">Retour</a>
         </div>
+        <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>
     </div>
 </template>

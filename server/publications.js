@@ -14,7 +14,7 @@ Meteor.publish("rouge", function(){
     return Rouge.find();
 });
 Meteor.publish("vert", function(){
-    return vert.find();
+    return Vert.find();
 });
 Meteor.publish("incolore", function(){
     return Incolore.find();

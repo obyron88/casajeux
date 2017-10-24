@@ -35,60 +35,111 @@ h1{
 }
 h3{
     color: white;
+    font-weight: bold;
+
 }
 h2{
-    color: gold;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
 }
 .imgblanc{
     height: 300px;
 }
 .inputcompt{
-    color: white;
+    color: black;
     text-align: center;
     width: 80px;
     height: 30px;
-    border: none;
-    border-radius: 5px;
+    border: saddlebrown double;
+    border-radius: 3px;
     text-decoration: none;
-    background: -moz-linear-gradient(red, black);
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
     font-weight: bold;
-    /*kacsart fait tt décaler en plein écran*/
     font-family: KacstArt;
 }
 .commander {
-    color: #ececec;
+    color: black;
     text-align: center;
     height: 30px;
-    border: brown;
-    border-radius: 5px;
     margin: auto;
+    border: saddlebrown double;
     margin-bottom: 10px;
     margin-top: 10px;
-    background: -moz-linear-gradient(darkorange, saddlebrown, saddlebrown, black);
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
     font-weight: bold;
     font-family: Dingbats;
 }
 .commander:hover {
     color: black;
+    border: dashed;
 }
 .retour{
-    color: gold;
+    color: black;
     text-align: center;
     padding: 5px;
-    border: black;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: saddlebrown double;
     text-decoration: none;
-    background: -moz-linear-gradient(black, dimgrey, dimgrey, black);
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
     font-weight: bold;
-    /*kacsart fait tt décaler en plein écran*/
     font-family: Dingbats;
 }
 .retour:hover{
-    color: orange;
+    color: black;
+    border: dashed;
 }
 .panier{
     height: 50px;
 }
 .compteurpanier{
     color: yellow;
+}
+.panierprice{
+    color: gold;
+}
+.totalcommande{
+    color: white;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p{
+    color: white;
+    font-weight: bold;
+}
+.supprimer{
+    height: 40px;
+    margin-left: 30px;
+}
+.titrepanier{
+    background: -webkit-linear-gradient(darkgoldenrod, darkgoldenrod, gold, darkgoldenrod, darkgoldenrod);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+b{
+    background: -webkit-linear-gradient(black, grey, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+.panierinfo{
+    font-size: 18px !important;
+    font-weight: bold !important;
+   color: darkgrey;
+}
+.panierinfobdd{
+    font-weight: bold ;
+    font-size: 25px;
+    color: white;
+}
+.stock{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }

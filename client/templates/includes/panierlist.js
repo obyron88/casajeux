@@ -20,8 +20,8 @@ Template.blanc.events({
     'submit .formu'(event) {
         //reste sur la page même après avoir submit à partir du bouton
     event.preventDefault();
-// crée une variable qui va appliquer un event sur la value de l'input avec pour name countitem ciblé par target
-        var inputcount = event.target.countitem.value;
+// crée une variable qui va appliquer un event sur la value de l'input avec pour name countitem ciblé par target parseint transforme en int au lieu de string
+        var inputcount =  parseInt(event.target.countitem.value);
 // insère dans la collection Panierlist
     Panierlist.insert({
         //crée le template countitem qui est égal  à la value de l'input count
@@ -32,7 +32,16 @@ Template.blanc.events({
         //créer un tamplate qui est égal au name de la collection Panierlist
         name:this.name,
         price:this.price,
-        image:this.image
+        image:this.image,
+        couleur:this.couleur,
+        édition:this.édition,
+        état:this.état,
+        premium:this.premium,
+        langue:this.langue,
+        rareté:this.rareté,
+        type:this.type,
+        mana:this.mana,
+        stock:this.stock
     });
 },
 
@@ -41,14 +50,23 @@ Template.bleu.events({
     'submit .formu'(event) {
         event.preventDefault();
 
-        var inputcount = event.target.countitem.value;
+        var inputcount =  parseInt(event.target.countitem.value);
 
         Panierlist.insert({
             countitem:inputcount,
             itemprice:this.price*inputcount,
             name:this.name,
             price:this.price,
-            image:this.image
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
         });
     },
 });
@@ -56,14 +74,23 @@ Template.noir.events({
     'submit .formu'(event) {
         event.preventDefault();
 
-        var inputcount = event.target.countitem.value;
+        var inputcount =  parseInt(event.target.countitem.value);
 
         Panierlist.insert({
             countitem:inputcount,
             itemprice:this.price*inputcount,
             name:this.name,
             price:this.price,
-            image:this.image
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
         });
     },
 });
@@ -72,14 +99,23 @@ Template.rouge.events({
     'submit .formu'(event) {
         event.preventDefault();
 
-        var inputcount = event.target.countitem.value;
+        var inputcount =  parseInt(event.target.countitem.value);
 
         Panierlist.insert({
             countitem:inputcount,
             itemprice:this.price*inputcount,
             name:this.name,
             price:this.price,
-            image:this.image
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
         });
     },
 });
@@ -95,7 +131,66 @@ Template.vert.events({
             itemprice:this.price*inputcount,
             name:this.name,
             price:this.price,
-            image:this.image
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
+        });
+    },
+});
+
+Template.vert.events({
+    'submit .formu'(event) {
+        event.preventDefault();
+       // parseint transforme en int au lieu de string
+        var inputcount = parseInt(event.target.countitem.value);
+
+        Panierlist.insert({
+            countitem:inputcount,
+            itemprice:this.price*inputcount,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
+        });
+    },
+});
+
+Template.multicolore.events({
+    'submit .formu'(event) {
+        event.preventDefault();
+        //parseint transforme en int au lieu de string
+        var inputcount = parseInt(event.target.countitem.value);
+
+        Panierlist.insert({
+            countitem:inputcount,
+            itemprice:this.price*inputcount,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock
         });
     },
 });
@@ -114,9 +209,8 @@ Template.panierlist.events({
 Template.panierlist.events({
     //au click sur la classe inputcompt fait un event
     'click .inputcompt'(event){
-        event.preventDefault();
-//crée une variable qui va récupérer la value en jquery de la classe id et donc par l'id
-        var inputcount = $("."+this._id+"").val();
+//crée une variable qui va récupérer la value en jquery de la classe id et donc par l'id parseint transforme en int au lieu de string
+        var inputcount = parseInt($("."+this._id+"").val());
 // va update dans la collection Panierlist à partir de l'id toute les infos ci dessous au click sur l'input
         Panierlist.update(this._id, {
             countitem:inputcount,
@@ -124,6 +218,15 @@ Template.panierlist.events({
             name:this.name,
             image:this.image,
             price:this.price,
+            couleur:this.couleur,
+            édition:this.édition,
+            état:this.état,
+            premium:this.premium,
+            langue:this.langue,
+            rareté:this.rareté,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock,
             _id:this._id
         });
     },

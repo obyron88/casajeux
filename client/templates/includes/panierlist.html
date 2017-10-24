@@ -1,20 +1,25 @@
 <template name="panierlist">
     <div class="jumbotron">
         <div class="row">
-                    <h1>Panier</h1>
+                    <h1 class="titrepanier">Panier</h1>
                     {{>panier}}
                     <form class="passercommande"  method="post">
                     {{#each panierlist}}
-                        <div class="col-xs-12 col-sm-12 col-md-4">
-                    <p> <img class="imgfood" src="/images/{{image}}"> = {{itemprice}}€</p>
-                        <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="99" value="{{countitem}}">
-                        <input class="supprimer" type="button" name="supprimer" value="Supprimer">
-                    <hr>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                     <img class="imgblanc" src="/images/{{image}}">
+                            <p class="panierinfo">Prix unitaire: <i class="panierinfobdd">{{price}}€</i></p>
+                            <p class="panierinfo">En stock: <i class="panierinfobdd">{{stock}}</i></p>
+                            <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
+                            <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
+                            <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
+                            <h2>{{itemprice}}€</h2>
+                        <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="{{countitem}}">
+                            <img class="supprimer" name="supprimer" src="/images/supprimer.png">
                         </div>
                     {{/each}}
-                    <p>Total de la commande <b>{{prixtotal}} €</b></p>
-                    <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>
                     </form>
         </div>
+        <h3 class="totalcommande">Total de la commande <b>{{prixtotal}} €</b></h3>
+        <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>
     </div>
 </template>
