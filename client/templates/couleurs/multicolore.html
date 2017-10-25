@@ -12,6 +12,11 @@
                     <span class="stock">En stock: {{stock}}</span><br>
                     <input class="inputcompt" name="countitem" type="number" min="0" max="{{stock}}" value="0"><br>
                     <input class="commander" type="submit" name="commander" value="Valider !">
+                    {{#if isInRole 'admin'}}
+                    <input class="suppradmin" type="button" name="suppradmin" value="Supprimer">
+                    <!--affiche le champ _id et le champ categorie de la fixture correspondante au template dans l'url -->
+                    <a class="updateadmin" href="/update/{{_id}}/{{couleurs}}"><input class="updateadmin" type="button" name="updateadmin" value="Update"></a>
+                    {{/if}}
                 </div>
             </form>
                 {{/each}}

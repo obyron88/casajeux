@@ -1,6 +1,9 @@
 <template name="couleurs">
     {{>header}}
     <div class="jumbotron">
+        {{#if isInRole 'admin'}}
+        <h2>Welcome admin !</h2>
+        {{/if}}
     {{#each couleurs}}
             <a href="/couleurs/{{name}}"><img class="imgcouleurs" src="/images/{{image}}"></a>
 
