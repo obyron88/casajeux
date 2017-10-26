@@ -122,6 +122,7 @@ p{
     -webkit-text-stroke-color: #fff;
 }
 b{
+    font-size: 30px;
     background: -webkit-linear-gradient(black, grey, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -146,50 +147,37 @@ b{
 .updateadmin{
     color: white;
     text-align: center;
+    border: black;
     height: 30px;
-    margin: auto;
-    border: saddlebrown double;
-    margin-bottom: 10px;
-    margin-top: 10px;
     background: -webkit-linear-gradient(blue, black);
     font-weight: bold;
     font-family: Dingbats;
 }
 .updateadmin:hover {
-    color: white;
-    border: dashed;
+    color: pink;
 }
 .suppradmin{
     color: white;
     text-align: center;
+    border: black;
     height: 30px;
-    margin: auto;
-    border: saddlebrown double;
-    margin-bottom: 10px;
-    margin-top: 10px;
     background: -webkit-linear-gradient(red, black);
     font-weight: bold;
     font-family: Dingbats;
 }
 .suppradmin:hover {
-    color: white;
-    border: dashed;
+    color: pink;
 }
 .updatesub{
     color: white;
-    text-align: center;
+    border: black;
     height: 30px;
-    margin: auto;
-    border: saddlebrown double;
-    margin-bottom: 10px;
-    margin-top: 10px;
     background: -webkit-linear-gradient(blue, black);
     font-weight: bold;
     font-family: Dingbats;
 }
 .updatesub:hover {
-    color: white;
-    border: dashed;
+    color: pink;
 }
 .dropdown-toggle{
     font-size: large;

@@ -9,7 +9,10 @@
                     <h3><u>{{name}}</u></h3>
                     <h2>{{price}}€</h2>
                     <img class="imgblanc" src="/images/{{image}}"><br>
-                    <span class="stock">En stock: {{stock}}</span><br>
+                    <span class="stock">En stock: {{stock}}</span>
+                    <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
+                    <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
+                    <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
                     <input class="inputcompt" name="countitem" type="number" min="0" max="{{stock}}" value="0"><br>
                     <input class="commander" type="submit" name="commander" value="Valider !">
                     {{#if isInRole 'admin'}}
