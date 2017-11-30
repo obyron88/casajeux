@@ -10,5 +10,12 @@ Template.panier.helpers({
         });
         return paniercount;
     },
-
+    prixtotal: function () {prixtotal = 0;
+        //cherche dans la collection les fields avec itemprice et parcour le document avec map
+        Panierlist.find({}, {fields:{itemprice:1}}).map(function(doc) {
+            // le prixtotal est égal à tt les itemprice du doc additionné
+            prixtotal += doc.itemprice;
+        });
+        return prixtotal;
+    },
 });

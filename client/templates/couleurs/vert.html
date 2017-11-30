@@ -3,6 +3,10 @@
         <div class="row">
             <img src="/images/vert.png">
             <div>{{>panier}}</div>
+            <br>
+            {{#if isInRole 'admin'}}
+            <a href="/addvert" class="retour">Ajouter une carte</a>
+            {{/if}}
                 {{#each vert}}
             <form class="formu" method="post">
                 <div class="col-xs-12 col-sm-12 col-md-4">
@@ -17,7 +21,7 @@
                     <input class="commander" type="submit" name="commander" value="Valider !">
                     {{#if isInRole 'admin'}}
                     <input class="suppradmin" type="button" name="suppradmin" value="Supprimer">
-                    <!--affiche le champ _id et le champ categorie de la fixture correspondante au template dans l'url -->
+                    <!--affiche le champ _id et le champ couleurs de la fixture correspondante au template dans l'url -->
                     <a class="updateadmin" href="/update/{{_id}}/{{couleurs}}"><input class="updateadmin" type="button" name="updateadmin" value="Update"></a>
                     {{/if}}
                 </div>

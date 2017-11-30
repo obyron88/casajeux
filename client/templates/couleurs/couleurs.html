@@ -1,6 +1,7 @@
 <template name="couleurs">
     {{>header}}
     <div class="jumbotron">
+        <img src="images/glow.jpg" alt="">
         {{#if isInRole 'admin'}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -11,8 +12,6 @@
         {{/if}}
     {{#each couleurs}}
             <a href="/couleurs/{{name}}"><img class="imgcouleurs" src="/images/{{image}}"></a>
-
     {{/each}}
-
     </div>
 </template>

@@ -91,8 +91,7 @@ if (Couleurs.find().count() === 0) {
     });
 
 
-    let BleuList = [
-        {
+    let BleuList = [{
             image: "time_walk.jpg",
             name: "Time Walk",
             price: 950,
@@ -112,8 +111,7 @@ if (Couleurs.find().count() === 0) {
     });
 
 
-    let NoirList = [
-        {
+    let NoirList = [{
             image: "appel_a_la_tombe.jpg",
             name: "Appel à la tombe",
             price: 1.50,
@@ -133,8 +131,7 @@ if (Couleurs.find().count() === 0) {
     });
 
 
-    let RougeList = [
-        {
+    let RougeList = [{
             image: "gobelin_des_rues.jpg",
             name: "Gobelin des rues",
             price: 1.50,
@@ -153,8 +150,7 @@ if (Couleurs.find().count() === 0) {
         Rouge.insert(doc);
     });
 
-    let VertList = [
-        {
+    let VertList = [{
             image: "Guivre_epuratrice.jpg",
             name: "Guivre épuratrice",
             price: 0.40,
@@ -174,8 +170,7 @@ if (Couleurs.find().count() === 0) {
     });
 
 
-    let IncoloreList = [
-        {
+    let IncoloreList = [{
             image: "colosse_de_sombracier.jpg",
             name: "Colosse de sombracier",
             price: 18,
@@ -194,8 +189,7 @@ if (Couleurs.find().count() === 0) {
         Incolore.insert(doc);
     });
 
-    let MulticoloreList = [
-        {
+    let MulticoloreList = [{
             image: "acide_sliver.jpg",
             name: "SlivoÏde acide",
             price: 4,

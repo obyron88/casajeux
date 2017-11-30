@@ -225,3 +225,18 @@ a:hover{
     color: gold;
     text-decoration: none;
 }
+.addsub{
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    border: green double;
+    text-decoration: none;
+    background: -webkit-linear-gradient(darkgreen, lime, lime);
+    font-weight: bold;
+    font-family: Dingbats;
+}
+.addsub:hover{
+    color: black;
+    border: dashed;
+}
