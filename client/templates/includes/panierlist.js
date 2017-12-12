@@ -1,7 +1,7 @@
 Meteor.subscribe("panierlist");
 
 Template.panierlist.helpers({
-    panierlist: function(){return Panierlist.find()},
+     panierlist: function(){return Panierlist.find()},
     // fixe le template prixtotal à 0
     prixtotal: function () {prixtotal = 0;
     //cherche dans la collection les fields avec itemprice et parcour le document avec map

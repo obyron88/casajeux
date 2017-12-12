@@ -3,6 +3,7 @@ Meteor.subscribe("blanc");
 Template.blanc.helpers({
     blanc: function(){return Blanc.find()}
 });
+
 Template.blanc.events({
     // au click sur l'élément avec la classe supprimer
     'click .suppradmin'(event){
@@ -13,6 +14,7 @@ Template.blanc.events({
         })
     },
 });
+
 // déduit le nombre de cartes ajouté au panier du stock de la carte
 // Template.blanc.events({
 //     'submit .formu'(event){
