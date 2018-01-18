@@ -2,25 +2,39 @@ Meteor.publish("couleurs", function(){
     return Couleurs.find();
 });
 Meteor.publish("blanc", function(){
-    return Blanc.find();
+    let query      = {},
+    tri = { sort: { name: 1 } };
+    return Blanc.find(query, tri);
 });
 Meteor.publish("bleu", function(){
-    return Bleu.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Bleu.find(query, tri);
 });
 Meteor.publish("noir", function(){
-    return Noir.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Noir.find(query, tri);
 });
 Meteor.publish("rouge", function(){
-    return Rouge.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Rouge.find(query, tri);
 });
 Meteor.publish("vert", function(){
-    return Vert.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Vert.find(query, tri);
 });
 Meteor.publish("incolore", function(){
-    return Incolore.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Incolore.find(query, tri);
 });
 Meteor.publish("multicolore", function(){
-    return Multicolore.find();
+    let query      = {},
+        tri = { sort: {  name: 1 } };
+    return Multicolore.find(query, tri);
 });
 Meteor.publish(null, function (){
     return Meteor.roles.find({})

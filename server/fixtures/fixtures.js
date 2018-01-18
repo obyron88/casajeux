@@ -72,7 +72,7 @@ if (Couleurs.find().count() === 0) {
         {
             image: "Faveur_du_gryff.jpg",
             name: "Faveur du gryff",
-            price: 0.50,
+            price: 2,
             couleurs:"Blanc",
             édition: "Ténèbres sur Inistrad",
             état: "Bon",
@@ -105,6 +105,7 @@ if (Couleurs.find().count() === 0) {
             mana: 2,
             stock: 1,
         },
+
     ];
     _.each(BleuList, function (doc) {
         Bleu.insert(doc);
@@ -124,6 +125,20 @@ if (Couleurs.find().count() === 0) {
             type: "Enchantement",
             mana: 5,
             stock: 4,
+        },
+        {
+            image: "black_lotus.jpg",
+            name: "Lotus noir",
+            price: 12000,
+            couleurs:"Noir",
+            édition: "Alpha",
+            état: "Neuf",
+            premium: "Non",
+            langue: "VO",
+            rareté: "Rare",
+            type: "Artefact",
+            mana: 0,
+            stock: 1,
         },
     ];
     _.each(NoirList, function (doc) {

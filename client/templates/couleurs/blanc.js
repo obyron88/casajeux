@@ -1,19 +1,38 @@
 Meteor.subscribe("blanc");
 
-Template.blanc.helpers({
-    blanc: function(){return Blanc.find()}
+Template.blanc.onCreated(function() {
+    this.sortBlanc = new ReactiveVar(1);
 });
 
 Template.blanc.events({
-    // au click sur l'élément avec la classe supprimer
-    'click .suppradmin'(event){
-        event.preventDefault();
-
-        Blanc.remove({
-            _id:this._id
-        })
-    },
+    'click #sorting': function() {
+        var self = Template.instance();
+        self.sortBlanc.set(self.sortBlanc.get() * -1);
+    }
 });
+
+Template.blanc.helpers({
+    blancTrié: function () {
+        var self = Template.instance();
+        var sortBlanc = self.sortBlanc.get();
+        return Blanc.find({}, { sort: { price: sortBlanc } });
+    }
+});
+// Template.blanc.helpers({
+//     blancTrié: function(){return Blanc.find({}, { sort: { price: -1, name: 1 } })}
+// });
+
+// Template.blanc.events({
+//     // au click sur l'élément avec la classe supprimer
+//     'click .suppradmin'(event){
+//         event.preventDefault();
+//
+//         Blanc.remove({
+//             _id:this._id
+//         })
+//     },
+// });
+
 
 // déduit le nombre de cartes ajouté au panier du stock de la carte
 // Template.blanc.events({
