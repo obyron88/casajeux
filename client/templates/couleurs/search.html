@@ -1,7 +1,10 @@
 <template name="search">
-
-        <input id="mana" type="text" placeholder="Mana" />
-
+    <form class="formtri">
+        <input class="mana" type="text" placeholder="Mana" />
+        <input class="price" type="text" placeholder="Price" />
+        <!--<input class="rareté" type="text" placeholder="Rareté" />-->
+        <button type="submit">Submit</button>
+    </form>
         {{#each results}}
         <form class="formu" method="post">
             <div class="col-xs-12 col-sm-12 col-md-4">

@@ -22,16 +22,16 @@ Template.blanc.helpers({
 //     blancTrié: function(){return Blanc.find({}, { sort: { price: -1, name: 1 } })}
 // });
 
-// Template.blanc.events({
-//     // au click sur l'élément avec la classe supprimer
-//     'click .suppradmin'(event){
-//         event.preventDefault();
-//
-//         Blanc.remove({
-//             _id:this._id
-//         })
-//     },
-// });
+Template.blanc.events({
+    // au click sur l'élément avec la classe supprimer
+    'click .suppradmin'(event){
+        event.preventDefault();
+
+        Blanc.remove({
+            _id:this._id
+        })
+    },
+});
 
 
 // déduit le nombre de cartes ajouté au panier du stock de la carte
