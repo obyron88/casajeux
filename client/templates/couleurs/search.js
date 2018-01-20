@@ -11,7 +11,7 @@ Template.search.helpers({
     results: function() {
         var s = '';
         var i = parseInt(s);
-        if (Session.get('manaFilter') === i) {
+        if (Session.equals('manaFilter', i)) {
             return Blanc.find({
                 price: Session.get('priceFilter'),
                 // mana: Session.get('manaFilter')
