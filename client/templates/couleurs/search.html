@@ -1,8 +1,14 @@
 <template name="search">
     <form class="formtri">
         <input class="mana" value="" placeholder="Mana" />
-        <input class="price" value="" placeholder="Price" />
-        <!--<input class="rareté" value="" placeholder="Rareté" />-->
+        <input class="price" value="" placeholder="Prix" />
+        <select class="rareté">
+            <option value=''>Rareté</option>
+            <option value="Mythique">Mythique</option>
+            <option value="Rare">Rare</option>
+            <option value="Unco">Unco</option>
+            <option value="Commune">Commune</option>
+        </select>
         <button type="submit">Submit</button>
     </form>
         {{#each results}}
