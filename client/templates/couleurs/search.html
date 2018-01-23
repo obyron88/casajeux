@@ -1,16 +1,44 @@
 <template name="search">
     <form class="formtri">
-        <input class="mana" value='' placeholder="Mana" />
-        <input class="price" value='' placeholder="Prix" />
+        <select class="mana">
+            <option value=''>Mana</option>
+            {{#each  mana}}
+            <option value="{{this}}" name="mana">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <select class="price">
+            <option value=''>Prix</option>
+            {{#each  prix}}
+            <option value="{{this}}" name="price">{{this}}</option>
+            {{/each}}
+        </select>
+
         <select class="rareté">
             <option value=''>Rareté</option>
-            <option value="Mythique">Mythique</option>
-            <option value="Rare">Rare</option>
-            <option value="Unco">Unco</option>
-            <option value="Commune">Commune</option>
+            {{#each  rareté}}
+            <option value="{{this}}" name="rareté">{{this}}</option>
+            {{/each}}
         </select>
-        <button type="submit">Submit</button>
+
+        <select class="type">
+            <option value=''>Types</option>
+            {{#each  type}}
+            <option value="{{this}}" name="type">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <select class="édition">
+            <option value=''>Editions</option>
+            {{#each  édition}}
+            <option value="{{this}}" name="édition">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <button>Submit</button>
+
     </form>
+
         {{#each results}}
         <form class="formu" method="post">
             <div class="col-xs-12 col-sm-12 col-md-4">
