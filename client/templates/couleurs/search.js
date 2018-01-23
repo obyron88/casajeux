@@ -10,37 +10,50 @@ Template.search.events({
 Template.search.helpers({
     results: function() {
 
-        var s = '';
-        var i = parseInt(s);
+        var empty = '';
+        var i = parseInt(empty);
         var u = undefined;
         var ui = parseInt(u);
         var mana = 'manaFilter';
         var price = 'priceFilter';
         var rareté = 'raretéFilter';
-        var test = Session.equals(mana, i);
-        var test2 = Session.equals(price, i);
+        var manai = Session.equals(mana, i);
+        var manaui = Session.equals(mana, ui);
+        var pricei = Session.equals(price, i);
+        var priceui = Session.equals(price, ui);
+        var raretéi = Session.equals(rareté, empty);
 
-        if (Session.equals(mana, i) || Session.equals(mana, ui)) {
+        if (manai && pricei) {
+            return Blanc.find({
+                rareté: Session.get(rareté),
+            });
+        }
+        if (manai && raretéi) {
+            return Blanc.find({
+                price: Session.get(price),
+            });
+        }
+        if (pricei && raretéi) {
+            return Blanc.find({
+                mana: Session.get(mana),
+            });
+        }
+        if (manai || manaui) {
             return Blanc.find({
                 price: Session.get(price),
                 rareté: Session.get(rareté),
             });
         }
-        if (Session.equals(price, i) || Session.equals(price, ui)) {
+        if (pricei || priceui) {
             return Blanc.find({
                 mana: Session.get(mana),
                 rareté: Session.get(rareté),
             });
         }
-        if (Session.equals(rareté, '')) {
+        if (raretéi) {
             return Blanc.find({
                 mana: Session.get(mana),
                 price: Session.get(price),
-            });
-        }
-        if (test || test2) {
-            return Blanc.find({
-                rareté: Session.get(rareté),
             });
         }
         else {
