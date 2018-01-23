@@ -1,9 +1,10 @@
 <template name="search">
     <form class="formtri">
-        <select class="mana">
-            <option value=''>Mana</option>
-            {{#each  mana}}
-            <option value="{{this}}" name="mana">{{this}}</option>
+
+        <select class="name">
+            <option value=''>Nom</option>
+            {{#each  nom}}
+            <option value="{{this}}" name="name">{{this}}</option>
             {{/each}}
         </select>
 
@@ -11,6 +12,20 @@
             <option value=''>Prix</option>
             {{#each  prix}}
             <option value="{{this}}" name="price">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <select class="mana">
+            <option value=''>Mana</option>
+            {{#each  mana}}
+            <option value="{{this}}" name="mana">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <select class="édition">
+            <option value=''>Editions</option>
+            {{#each  édition}}
+            <option value="{{this}}" name="édition">{{this}}</option>
             {{/each}}
         </select>
 
@@ -28,10 +43,10 @@
             {{/each}}
         </select>
 
-        <select class="édition">
-            <option value=''>Editions</option>
-            {{#each  édition}}
-            <option value="{{this}}" name="édition">{{this}}</option>
+        <select class="premium">
+            <option value=''>Premium ?</option>
+            {{#each  foil}}
+            <option value="{{this}}" name="premium">{{this}}</option>
             {{/each}}
         </select>
 
