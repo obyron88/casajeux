@@ -272,6 +272,7 @@ Template.search.helpers({
 
         // 3 champs vident ------------------------------------------------------------------------------------------
 
+        // début de name.............................................................................................
         // début name price
         if (nameEmpty && priceEmptyInt && manaEmptyInt) {
             return Blanc.find({
@@ -349,40 +350,61 @@ Template.search.helpers({
         }
         // fin name mana
         // début name édition
-        if (nameEmpty && raretéEmpty && premiumEmpty) {
+        if (nameEmpty && éditionEmpty && raretéEmpty) {
             return Blanc.find({
                 mana: Session.get(mana),
                 price: Session.get(price),
-                rareté: Session.get(rareté),
                 type: Session.get(type),
-                édition: Session.get(édition),
                 premium: Session.get(premium),
-                name: Session.get(name),
             });
         }
-        if (nameEmpty && raretéEmpty && premiumEmpty) {
+        if (nameEmpty && éditionEmpty && typeEmpty) {
             return Blanc.find({
                 mana: Session.get(mana),
                 price: Session.get(price),
                 rareté: Session.get(rareté),
-                type: Session.get(type),
-                édition: Session.get(édition),
                 premium: Session.get(premium),
-                name: Session.get(name),
             });
         }
-        if (nameEmpty && raretéEmpty && premiumEmpty) {
+        if (nameEmpty && éditionEmpty && premiumEmpty) {
             return Blanc.find({
                 mana: Session.get(mana),
                 price: Session.get(price),
                 rareté: Session.get(rareté),
                 type: Session.get(type),
-                édition: Session.get(édition),
-                premium: Session.get(premium),
-                name: Session.get(name),
             });
         }
         // fin name édition
+        // début name rareté
+        if (nameEmpty && raretéEmpty && typeEmpty) {
+            return Blanc.find({
+                mana: Session.get(mana),
+                price: Session.get(price),
+                premium: Session.get(premium),
+                édition: Session.get(édition),
+            });
+        }
+        if (nameEmpty && raretéEmpty && premiumEmpty) {
+            return Blanc.find({
+                mana: Session.get(mana),
+                price: Session.get(price),
+                édition: Session.get(édition),
+                type: Session.get(type),
+            });
+        }
+        // fin name rareté
+        // début name type
+        if (nameEmpty && typeEmpty && premiumEmpty) {
+            return Blanc.find({
+                mana: Session.get(mana),
+                price: Session.get(price),
+                édition: Session.get(édition),
+                rareté: Session.get(rareté),
+            });
+        }
+        // fin name type et premium par la même accasion
+        // fin de name...............................................................................................
+
         // 2 champs vident ------------------------------------------------------------------------------------------
 
         //si 2 champs sont vides return les autres
