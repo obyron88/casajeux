@@ -9,7 +9,7 @@ Template.panierlist.helpers({
         // le prixtotal est égal à tt les itemprice du doc additionné
             prixtotal += doc.itemprice;
         });
-        return prixtotal;
+        return Math.round(prixtotal*100)/100;
     },
 });
 
@@ -28,7 +28,7 @@ Template.blanc.events({
         // (affiche la value inputcount dans l'html en marquant {{countitem}}
         countitem:inputcount,
         //crée le template itemprice qui est égal  à la value de l'inputcount* le prix
-        itemprice:this.price*inputcount,
+        itemprice:Math.round((this.price*inputcount)*100)/100,
         //créer un tamplate qui est égal au name de la collection Panierlist
         name:this.name,
         price:this.price,
@@ -54,7 +54,7 @@ Template.bleu.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -78,7 +78,7 @@ Template.noir.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -103,7 +103,7 @@ Template.rouge.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -128,7 +128,7 @@ Template.vert.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -153,7 +153,7 @@ Template.vert.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -178,7 +178,7 @@ Template.multicolore.events({
 
         Panierlist.insert({
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             price:this.price,
             image:this.image,
@@ -208,13 +208,13 @@ Template.panierlist.events({
 
 Template.panierlist.events({
     //au click sur la classe inputcompt fait un event
-    'click .inputcompt'(event){
+    'click .inputcompt'(){
 //crée une variable qui va récupérer la value en jquery de la classe id et donc par l'id parseint transforme en int au lieu de string
         var inputcount = parseInt($("."+this._id+"").val());
 // va update dans la collection Panierlist à partir de l'id toute les infos ci dessous au click sur l'input
         Panierlist.update(this._id, {
             countitem:inputcount,
-            itemprice:this.price*inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
             image:this.image,
             price:this.price,

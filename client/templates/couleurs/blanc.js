@@ -4,13 +4,6 @@ Template.blanc.onCreated(function() {
     this.sortBlanc = new ReactiveVar(1);
 });
 
-Template.blanc.events({
-    'click #sorting': function() {
-        var self = Template.instance();
-        self.sortBlanc.set(self.sortBlanc.get() * -1);
-    }
-});
-
 Template.blanc.helpers({
     blancTrié: function () {
         var self = Template.instance();
@@ -18,11 +11,13 @@ Template.blanc.helpers({
         return Blanc.find({}, { sort: { price: sortBlanc } });
     }
 });
-// Template.blanc.helpers({
-//     blancTrié: function(){return Blanc.find({}, { sort: { price: -1, name: 1 } })}
-// });
+
 
 Template.blanc.events({
+    'click #sorting': function() {
+        var self = Template.instance();
+        self.sortBlanc.set(self.sortBlanc.get() * -1);
+    },
     // au click sur l'élément avec la classe supprimer
     'click .suppradmin'(event){
         event.preventDefault();

@@ -1,12 +1,21 @@
-Template.search.events({
+Template.search.onCreated(function() {
+    this.sortBlanc = new ReactiveVar(1);
+});
 
-    'submit .formtri': function(e,t){
+Template.search.events({
+    'click #sorting': function(r) {
+        r.preventDefault();
+        var self = Template.instance();
+        self.sortBlanc.set(self.sortBlanc.get() * -1);
+    },
+
+    'submit .formtri': function(e){
         // au submit du form .formtri récupère les values des inputs
         e.preventDefault();
         // prevent default reste sur la même page à l'action
         // crée manafilter qui correspond à la value récupéré de l'input de classe mana (parseInt transforme la value en integer)
         Session.set('manaFilter', parseInt($('.mana').val()));
-        Session.set('priceFilter', parseInt($('.price').val()));
+        Session.set('priceFilter', parseFloat($('.price').val()));
         Session.set('raretéFilter', $('.rareté').val());
         Session.set('typeFilter', $('.type').val());
         Session.set('éditionFilter', $('.édition').val());
@@ -70,6 +79,8 @@ Template.search.helpers({
 
     results: function() {
 // récupère le session.set et le passe en variable (pour pouvoir s'en servir dans le helpers)
+        var self = Template.instance();
+        var sortBlanc = self.sortBlanc.get();
        var manav = Session.get('manaFilter');
        var pricev = Session.get('priceFilter');
        var raretév = Session.get('raretéFilter');
@@ -101,7 +112,6 @@ Template.search.helpers({
             selector.name = namev;
         }
 // return les champs valides sélectionnés par selector
-       return Blanc.find(selector)
-
+       return Blanc.find(selector, { sort: { price: sortBlanc }})
     }
 });
