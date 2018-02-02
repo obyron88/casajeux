@@ -3,24 +3,28 @@
         <div class="row">
             <img src="/images/blanc.png">
             <div>{{>panier}}</div>
-            <div>{{>search}}</div>
-<button id="sorting">Prix </button>
-            <br>
             {{#if isInRole 'admin'}}
+            <br>
             <a href="/addblanc" class="retour">Ajouter une carte</a>
+            <br>
             {{/if}}
+            <br>
+            <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>
+            <br>
+            <br>
+            <button id="sorting">Prix </button>
+            <div>{{>search}}</div>
+            <br>
     {{#each blancTrié}}
             <form class="formu" method="post">
                 <div class="col-xs-12 col-sm-12 col-md-4">
         <h3><u>{{name}}</u></h3>
         <h2>{{price}}€</h2>
         <img class="imgblanc" src="/images/{{image}}"><br>
-
                     <p class="stock">En stock: {{stock}}</p>
                     <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
                     <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
                     <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
-
         <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="0"><br>
                     <input class="commander" type="submit" name="commander" value="Valider !">
                     {{#if isInRole 'admin'}}

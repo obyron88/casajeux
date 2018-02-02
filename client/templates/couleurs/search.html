@@ -9,14 +9,14 @@
         </select>
 
         <select class="price">
-            <option value=''>Prix</option>
+            <option value='999'>Prix</option>
             {{#each  prix}}
             <option value="{{this}}" name="price">{{this}}</option>
             {{/each}}
         </select>
 
         <select class="mana">
-            <option value=''>Mana</option>
+            <option value='999'>Mana</option>
             {{#each  mana}}
             <option value="{{this}}" name="mana">{{this}}</option>
             {{/each}}
@@ -53,6 +53,7 @@
         <button>Submit</button>
 
     </form>
+    <div class="row">
 
         {{#each results}}
         <form class="formu" method="post">
@@ -76,4 +77,6 @@
             </div>
         </form>
         {{/each}}
+    </div>
+    <hr>
 </template>
