@@ -73,8 +73,7 @@ h2{
     font-family: Dingbats;
 }
 .commander:hover {
-    color: black;
-    border: dashed;
+    border: solid 3px grey;
 }
 .retour{
     color: black;
@@ -88,8 +87,9 @@ h2{
     font-family: Dingbats;
 }
 .retour:hover{
+    text-decoration: none;
     color: black;
-    border: dashed;
+    border: solid 3px grey;
 }
 .panier{
     height: 50px;
@@ -132,7 +132,7 @@ b{
 .panierinfo{
     font-size: 18px !important;
     font-weight: bold !important;
-   color: darkgrey;
+    color: darkgrey;
 }
 .panierinfobdd{
     font-weight: bold ;
@@ -147,37 +147,38 @@ b{
 .updateadmin{
     color: white;
     text-align: center;
-    border: black;
+    border: solid 3px blue;
     height: 30px;
     background: -webkit-linear-gradient(blue, black);
     font-weight: bold;
     font-family: Dingbats;
+
 }
 .updateadmin:hover {
-    color: pink;
+    border: solid 3px grey;
 }
 .suppradmin{
     color: white;
     text-align: center;
-    border: black;
+    border: solid 3px red;
     height: 30px;
     background: -webkit-linear-gradient(red, black);
     font-weight: bold;
     font-family: Dingbats;
 }
 .suppradmin:hover {
-    color: pink;
+    border: solid 3px grey;
 }
 .updatesub{
     color: white;
-    border: black;
+    border: solid 3px blue;
     height: 30px;
     background: -webkit-linear-gradient(blue, black);
     font-weight: bold;
     font-family: Dingbats;
 }
 .updatesub:hover {
-    color: pink;
+    border: solid 3px grey;
 }
 .dropdown-toggle{
     font-size: large;
@@ -186,18 +187,27 @@ b{
     background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: none;
 }
 .dropdown-toggle:hover{
     text-decoration: none;
 }
 .dropdown-menu{
+    position: relative;
     background-color: inherit;
+    float: inherit;
+    margin-left: 30%;
+    width: 40%;
+}
+#login-dropdown-list .dropdown-menu{
+    padding: inherit;
 }
 .btn-primary {
     color: #122b40;
     font-weight: bold;
     border-color: #761c19;
     background: -moz-linear-gradient(#E48D00, #FCB528, yellow, yellow, #FCB528, #E48D00);
+
 }
 .btn-primary:hover {
     color: #122b40;
@@ -224,12 +234,12 @@ a{
 }
 a:hover{
     color: gold;
+    text-decoration: none;
 }
 .addsub{
     color: black;
     text-align: center;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 3px;
     border: green double;
     text-decoration: none;
     background: -webkit-linear-gradient(darkgreen, lime, lime);
@@ -237,6 +247,54 @@ a:hover{
     font-family: Dingbats;
 }
 .addsub:hover{
+    border: solid 3px grey;
+}
+select {
+    font-weight: bold;
+    padding: 10px 40px 10px 10px;
+    margin-top: 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png") right center no-repeat;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select option {
+    padding: 0 4px;
+} /* for IE and Edge */
+#sorting{
     color: black;
-    border: dashed;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    border: saddlebrown double;
+    text-decoration: none;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
+    font-weight: bold;
+    font-family: Dingbats;
+}
+#sorting:hover{
+    border: solid 3px grey;
+}
+.searchsubmit{
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    border: saddlebrown double;
+    text-decoration: none;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
+    font-weight: bold;
+    font-family: Dingbats;
+}
+.searchsubmit:hover{
+    border: solid 3px grey;
+}
+.up{
+    font-weight: bold;
+    padding: 10px 40px 10px 10px;
+    margin-top: 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
 }

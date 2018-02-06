@@ -78,9 +78,9 @@ Template.search.helpers({
     },
 
     results: function() {
-// récupère le session.set et le passe en variable (pour pouvoir s'en servir dans le helpers)
         var self = Template.instance();
         var sortBlanc = self.sortBlanc.get();
+// récupère le session.set et le passe en variable (pour pouvoir s'en servir dans le helpers)
        var manav = Session.get('manaFilter');
        var pricev = Session.get('priceFilter');
        var raretév = Session.get('raretéFilter');
@@ -112,6 +112,8 @@ Template.search.helpers({
             selector.name = namev;
         }
 // return les champs valides sélectionnés par selector
-       return Blanc.find(selector, { sort: { price: sortBlanc }})
-    }
+        return Blanc.find(selector, { sort: { price: sortBlanc }})
+    },
+
 });
+

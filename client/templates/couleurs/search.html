@@ -1,10 +1,10 @@
 <template name="search">
     <form class="formtri">
-        <button id="sorting">Prix </button>
+        <div class="row">
         <select class="name">
-            <option value=''>Nom</option>
+            <option class="" value=''>Nom</option>
             {{#each  nom}}
-            <option value="{{this}}" name="name">{{this}}</option>
+            <option class="" value="{{this}}" name="name">{{this}}</option>
             {{/each}}
         </select>
 
@@ -49,12 +49,13 @@
             <option value="{{this}}" name="premium">{{this}}</option>
             {{/each}}
         </select>
-
-        <button>Submit</button>
-
+    </div>
+        <br>
+        <button id="sorting">Trier par prix</button>
+        <button class="searchsubmit">Rechercher</button>
     </form>
-    <div class="row">
 
+    <div class="row">
         {{#each results}}
         <form class="formu" method="post">
             <div class="col-xs-12 col-sm-12 col-md-4">
