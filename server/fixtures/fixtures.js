@@ -136,7 +136,7 @@ if (Couleurs.find().count() === 0) {
     let BleuList = [{
             image: "time_walk.jpg",
             name: "Time Walk",
-            price: 950,
+            price: 950.50,
             couleurs:"Bleu",
             édition: "Alpha",
             état: "Bon",
@@ -217,7 +217,7 @@ if (Couleurs.find().count() === 0) {
     let IncoloreList = [{
             image: "colosse_de_sombracier.jpg",
             name: "Colosse de sombracier",
-            price: 18,
+            price: 18.50,
             couleurs:"Incolore",
             édition: "Sombracier",
             état: "Neuf",
@@ -250,7 +250,7 @@ if (Couleurs.find().count() === 0) {
     let MulticoloreList = [{
             image: "acide_sliver.jpg",
             name: "SlivoÏde acide",
-            price: 4,
+            price: 4.50,
             couleurs:"Multicolore",
             édition: "Stronghold",
             état: "Neuf",

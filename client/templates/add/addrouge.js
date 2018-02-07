@@ -9,7 +9,7 @@ Template.addrouge.events({
         event.preventDefault();
 
         var newname = event.target.nameadd.value;
-        var newprice = event.target.priceadd.value;
+        var newprice = parseFloat(event.target.priceadd.value);
         var newimage = event.target.imageadd.value;
         var newcouleurs = event.target.couleursadd.value;
         var newédition = event.target.éditionadd.value;
@@ -18,8 +18,8 @@ Template.addrouge.events({
         var newlangue = event.target.langueadd.value;
         var newrareté = event.target.raretéadd.value;
         var newtype = event.target.typeadd.value;
-        var newmana = event.target.manaadd.value;
-        var newstock = event.target.stockadd.value;
+        var newmana = parseInt(event.target.manaadd.value);
+        var newstock = parseInt(event.target.stockadd.value);
 
         Rouge.insert({
             name:newname,

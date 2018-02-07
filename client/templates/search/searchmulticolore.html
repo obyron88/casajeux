@@ -1,0 +1,83 @@
+<template name="searchmulticolore">
+    <form class="formtri">
+        <div class="row">
+            <select class="name">
+                <option class="" value=''>Nom</option>
+                {{#each  nom}}
+                <option class="" value="{{this}}" name="name">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="price">
+                <option value='999'>Prix</option>
+                {{#each  prix}}
+                <option value="{{this}}" name="price">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="mana">
+                <option value='999'>Mana</option>
+                {{#each  mana}}
+                <option value="{{this}}" name="mana">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="édition">
+                <option value=''>Editions</option>
+                {{#each  édition}}
+                <option value="{{this}}" name="édition">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="rareté">
+                <option value=''>Rareté</option>
+                {{#each  rareté}}
+                <option value="{{this}}" name="rareté">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="type">
+                <option value=''>Types</option>
+                {{#each  type}}
+                <option value="{{this}}" name="type">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <select class="premium">
+                <option value=''>Premium ?</option>
+                {{#each  foil}}
+                <option value="{{this}}" name="premium">{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <br>
+        <button id="sorting">Trier par prix</button>
+        <button class="searchsubmit">Rechercher</button>
+    </form>
+
+    <div class="row">
+        {{#each resultsmulticolore}}
+        <form class="formu" method="post">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h3><u>{{name}}</u></h3>
+                <h2>{{price}}€</h2>
+                <img class="imgblanc" src="/images/{{image}}"><br>
+
+                <p class="stock">En stock: {{stock}}</p>
+                <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
+                <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
+                <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
+
+                <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="0"><br>
+                <input class="commander" type="submit" name="commander" value="Valider !">
+                {{#if isInRole 'admin'}}
+                <input class="suppradmin" type="button" name="suppradmin" value="Supprimer">
+                <!--affiche le champ _id et le champ categorie de la fixture correspondante au template dans l'url -->
+                <a class="updateadmina" href="/update/{{_id}}/{{couleurs}}"><input class="updateadmin" type="button" name="updateadmin" value="Update"></a>
+                {{/if}}
+            </div>
+        </form>
+        {{/each}}
+    </div>
+    <hr>
+</template>

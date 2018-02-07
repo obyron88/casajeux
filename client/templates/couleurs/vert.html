@@ -3,11 +3,18 @@
         <div class="row">
             <img src="/images/vert.png">
             <div>{{>panier}}</div>
-            <br>
             {{#if isInRole 'admin'}}
+            <br>
             <a href="/addvert" class="retour">Ajouter une carte</a>
+            <br>
             {{/if}}
-                {{#each vert}}
+            <br>
+            <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>
+            <br>
+            <br>
+            <div>{{>searchvert}}</div>
+            <br>
+                {{#each vertTrié}}
             <form class="formu" method="post">
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <h3><u>{{name}}</u></h3>
