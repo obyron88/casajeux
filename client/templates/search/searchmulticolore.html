@@ -1,6 +1,13 @@
 <template name="searchmulticolore">
     <form class="formtri">
         <div class="row">
+            <select class="couleurs">
+                <option class="" value=''>Couleurs</option>
+                {{#each  couleurs}}
+                <option class="" value="{{this}}" name="couleurs">{{this}}</option>
+                {{/each}}
+            </select>
+
             <select class="name">
                 <option class="" value=''>Nom</option>
                 {{#each  nom}}

@@ -22,6 +22,8 @@ Template.blanc.events({
     event.preventDefault();
 // crée une variable qui va appliquer un event sur la value de l'input avec pour name countitem ciblé par target parseint transforme en int au lieu de string
         var inputcount =  parseInt(event.target.countitem.value);
+        // si l'input du nombre de cartes à ajouter au panier est différent de 0 ajouter dans le panier
+        if(inputcount != 0){
 // insère dans la collection Panierlist
     Panierlist.insert({
         //crée le template countitem qui est égal  à la value de l'input count
@@ -43,8 +45,8 @@ Template.blanc.events({
         mana:this.mana,
         stock:this.stock
     });
-},
-
+        }
+    }
 });
 Template.bleu.events({
     'submit .formu'(event) {
@@ -52,6 +54,8 @@ Template.bleu.events({
 
         var inputcount =  parseInt(event.target.countitem.value);
 
+        if(inputcount != 0){
+
         Panierlist.insert({
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
@@ -68,14 +72,15 @@ Template.bleu.events({
             mana:this.mana,
             stock:this.stock
         });
-    },
+        }
+    }
 });
 Template.noir.events({
     'submit .formu'(event) {
         event.preventDefault();
 
         var inputcount =  parseInt(event.target.countitem.value);
-
+        if(inputcount != 0){
         Panierlist.insert({
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
@@ -92,7 +97,8 @@ Template.noir.events({
             mana:this.mana,
             stock:this.stock
         });
-    },
+        }
+    }
 });
 
 Template.rouge.events({
@@ -100,7 +106,7 @@ Template.rouge.events({
         event.preventDefault();
 
         var inputcount =  parseInt(event.target.countitem.value);
-
+        if(inputcount != 0){
         Panierlist.insert({
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
@@ -117,7 +123,8 @@ Template.rouge.events({
             mana:this.mana,
             stock:this.stock
         });
-    },
+        }
+    }
 });
 
 Template.vert.events({
@@ -125,7 +132,7 @@ Template.vert.events({
         event.preventDefault();
 
         var inputcount = parseInt(event.target.countitem.value);
-
+        if(inputcount != 0){
         Panierlist.insert({
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
@@ -142,15 +149,16 @@ Template.vert.events({
             mana:this.mana,
             stock:this.stock
         });
-    },
+        }
+    }
 });
 
-Template.vert.events({
+Template.incolore.events({
     'submit .formu'(event) {
         event.preventDefault();
        // parseint transforme en int au lieu de string
         var inputcount = parseInt(event.target.countitem.value);
-
+        if(inputcount != 0){
         Panierlist.insert({
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
@@ -167,7 +175,8 @@ Template.vert.events({
             mana:this.mana,
             stock:this.stock
         });
-    },
+        }
+    }
 });
 
 Template.multicolore.events({
@@ -175,24 +184,25 @@ Template.multicolore.events({
         event.preventDefault();
         //parseint transforme en int au lieu de string
         var inputcount = parseInt(event.target.countitem.value);
-
-        Panierlist.insert({
-            countitem:inputcount,
-            itemprice:Math.round((this.price*inputcount)*100)/100,
-            name:this.name,
-            price:this.price,
-            image:this.image,
-            couleur:this.couleur,
-            édition:this.édition,
-            état:this.état,
-            premium:this.premium,
-            langue:this.langue,
-            rareté:this.rareté,
-            type:this.type,
-            mana:this.mana,
-            stock:this.stock
-        });
-    },
+        if (inputcount != 0) {
+            Panierlist.insert({
+                countitem: inputcount,
+                itemprice: Math.round((this.price * inputcount) * 100) / 100,
+                name: this.name,
+                price: this.price,
+                image: this.image,
+                couleur: this.couleur,
+                édition: this.édition,
+                état: this.état,
+                premium: this.premium,
+                langue: this.langue,
+                rareté: this.rareté,
+                type: this.type,
+                mana: this.mana,
+                stock: this.stock
+            });
+        }
+    }
 });
 
 Template.panierlist.events({

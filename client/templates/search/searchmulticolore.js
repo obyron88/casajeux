@@ -21,6 +21,7 @@ Template.searchmulticolore.events({
         Session.set('éditionFilter', $('.édition').val());
         Session.set('premiumFilter', $('.premium').val());
         Session.set('nameFilter', $('.name').val());
+        Session.set('couleursFilter', $('.couleurs').val());
 
     }
 });
@@ -32,6 +33,13 @@ Template.searchmulticolore.helpers({
         sort: {type: 1}, fields: {type: true}
     }).map(function(x) {
         return x.type;
+    }), true);
+    },
+
+    couleurs: function (){ return _.uniq(Multicolore.find({}, {
+        sort: {couleurs: 1}, fields: {couleurs: true}
+    }).map(function(x) {
+        return x.couleurs;
     }), true);
     },
 
@@ -88,6 +96,7 @@ Template.searchmulticolore.helpers({
         var éditionv = Session.get('éditionFilter');
         var premiumv = Session.get('premiumFilter');
         var namev = Session.get('nameFilter');
+        var couleursv = Session.get('couleursFilter');
         var selector = {};
 // si la valeur récupéré est différente de "" ou 999 select mana = la valeur récupéré
         if (manav != '999') {
@@ -95,6 +104,9 @@ Template.searchmulticolore.helpers({
         }
         if (pricev != '999') {
             selector.price = pricev;
+        }
+        if (couleursv != "") {
+            selector.couleurs = couleursv;
         }
         if (raretév != "") {
             selector.rareté = raretév;

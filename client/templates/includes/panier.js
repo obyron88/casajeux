@@ -16,6 +16,6 @@ Template.panier.helpers({
             // le prixtotal est égal à tt les itemprice du doc additionné
             prixtotal += doc.itemprice;
         });
-        return prixtotal;
+        return Math.round((prixtotal)*100)/100;
     },
 });
