@@ -1,9 +1,5 @@
 Meteor.subscribe("rouge");
 
-Template.rouge.helpers({
-    rouge: function(){return Rouge.find()}
-});
-
 Template.addrouge.events({
     'submit .addformrouge'(event) {
         event.preventDefault();

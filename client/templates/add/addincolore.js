@@ -1,9 +1,5 @@
 Meteor.subscribe("incolore");
 
-Template.incolore.helpers({
-    incolore: function(){return Incolore.find()}
-});
-
 Template.addincolore.events({
     'submit .addformincolore'(event) {
         event.preventDefault();

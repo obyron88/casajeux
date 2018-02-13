@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
     Meteor.startup(() => {
-        if (Meteor.users.findOne("qeSHfzEvAwRym4cB7"))
-            Roles.addUsersToRoles("qeSHfzEvAwRym4cB7", ['admin']);
+        if (Meteor.users.findOne("NDXKyJtPFDxgDj54v"))
+            Roles.addUsersToRoles("NDXKyJtPFDxgDj54v", ['admin']);
         // code to run on server at startup
 });

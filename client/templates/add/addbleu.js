@@ -1,9 +1,5 @@
 Meteor.subscribe("bleu");
 
-Template.bleu.helpers({
-    bleu: function(){return Bleu.find()}
-});
-
 Template.addbleu.events({
     'submit .addformbleu'(event) {
         event.preventDefault();

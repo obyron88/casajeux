@@ -3,6 +3,8 @@
         <div class="row">
             <img src="/images/bleu.png">
             <div>{{>panier}}</div>
+            <br>
+            <br>
             {{#if isInRole 'admin'}}
             <br>
             <a href="/addbleu" class="retour">Ajouter une carte</a>
@@ -19,7 +21,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <h3><u>{{name}}</u></h3>
                     <h2>{{price}}€</h2>
-                    <img class="imgblanc" src="/images/{{image}}"><br>
+                    <img class="imgblanc" src="{{image}}"><br>
                     <span class="stock">En stock: {{stock}}</span>
                     <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
                     <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>

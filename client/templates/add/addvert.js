@@ -1,9 +1,5 @@
 Meteor.subscribe("vert");
 
-Template.vert.helpers({
-    vert: function(){return Vert.find()}
-});
-
 Template.addvert.events({
     'submit .addformvert'(event) {
         event.preventDefault();

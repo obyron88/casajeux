@@ -1,9 +1,5 @@
 Meteor.subscribe("blanc");
 
-Template.blanc.helpers({
-    blanc: function(){return Blanc.find()}
-});
-
 Template.addblanc.events({
     'submit .addformblanc'(event) {
         event.preventDefault();

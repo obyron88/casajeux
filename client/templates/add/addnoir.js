@@ -1,9 +1,5 @@
 Meteor.subscribe("noir");
 
-Template.noir.helpers({
-    noir: function(){return Noir.find()}
-});
-
 Template.addnoir.events({
     'submit .addformnoir'(event) {
         event.preventDefault();

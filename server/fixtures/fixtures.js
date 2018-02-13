@@ -42,7 +42,7 @@ if (Couleurs.find().count() === 0) {
 
 
     let BlancList= [{
-        image: "jareth_leonine_titan.jpg",
+        image: "http://www.magiccorporation.com/scan/onslaught/jareth_leonine_titan.jpg",
         name: "Jareth, Titan léonin",
         price: 2,
         couleurs:"Blanc",
@@ -56,7 +56,7 @@ if (Couleurs.find().count() === 0) {
         stock: 3,
     },
         {
-            image: "Descend_Upon_The_Sinful.jpg",
+            image: "http://www.magiccorporation.com/scan/shadows_over_innistrad/vf/013.jpg",
             name: "Fondre sur les pêcheurs",
             price: 7,
             couleurs:"Blanc",
@@ -70,7 +70,7 @@ if (Couleurs.find().count() === 0) {
             stock: 7,
         },
         {
-            image: "Faveur_du_gryff.jpg",
+            image: "http://www.magiccorporation.com/scan/shadows_over_innistrad/vf/020.jpg",
             name: "Faveur du gryff",
             price: 2,
             couleurs:"Blanc",
@@ -84,7 +84,7 @@ if (Couleurs.find().count() === 0) {
             stock: 5,
         },
         {
-            image: "appel_à_la_gloire.jpg",
+            image: "http://www.magiccorporation.com/scan/champions_of_kamigawa/vo/004.jpg",
             name: "Appel à la gloire",
             price: 1,
             couleurs:"Blanc",
@@ -98,7 +98,7 @@ if (Couleurs.find().count() === 0) {
             stock: 6,
         },
         {
-            image: "Anachorète_loxodon.jpg",
+            image: "http://www.magiccorporation.com/scan/fifth_dawn/vf/010.jpg",
             name: "Anachorète loxodon",
             price: 0.30,
             couleurs:"Blanc",
@@ -112,7 +112,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "Raksha_Lionceaudor.jpg",
+            image: "http://www.magiccorporation.com/scan/fifth_dawn/vf/012.jpg",
             name: "Raksha Lionceaudor",
             price: 3,
             couleurs:"Blanc",
@@ -134,7 +134,7 @@ if (Couleurs.find().count() === 0) {
 
 
     let BleuList = [{
-            image: "time_walk.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/time_walk.jpg",
             name: "Time Walk",
             price: 950.50,
             couleurs:"Bleu",
@@ -148,7 +148,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "2b.jpg",
+            image: "http://www.magiccorporation.com/scan/kaladesh/vf/057.jpg",
             name: "Ministre des enquêtes",
             price: 0.40,
             couleurs:"Bleu",
@@ -162,7 +162,7 @@ if (Couleurs.find().count() === 0) {
             stock: 5,
         },
         {
-            image: "3b.jpg",
+            image: "http://www.magiccorporation.com/scan/dragons_of_tarkir/vf/073.jpg",
             name: "Élémental du rivage",
             price: 5,
             couleurs:"Bleu",
@@ -176,7 +176,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "4b.jpg",
+            image: "http://www.magiccorporation.com/scan/scars_of_mirrodin/vf/033.jpg",
             name: "Grand architecte",
             price: 6,
             couleurs:"Bleu",
@@ -190,7 +190,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "5b.jpg",
+            image: "http://www.magiccorporation.com/scan/future_sight/vf/038.jpg",
             name: "Poings de plomb",
             price: 0.30,
             couleurs:"Bleu",
@@ -204,7 +204,7 @@ if (Couleurs.find().count() === 0) {
             stock: 4,
         },
         {
-            image: "6b.jpg",
+            image: "http://www.magiccorporation.com/scan/onslaught/blatant_thievery.jpg",
             name: "Vol éhonté",
             price: 0.90,
             couleurs:"Bleu",
@@ -224,7 +224,7 @@ if (Couleurs.find().count() === 0) {
 
 
     let NoirList = [{
-            image: "appel_a_la_tombe.jpg",
+            image: "http://www.magiccorporation.com/scan/scourge/vf/058.jpg",
             name: "Appel à la tombe",
             price: 1.50,
             couleurs:"Noir",
@@ -238,7 +238,7 @@ if (Couleurs.find().count() === 0) {
             stock: 4,
         },
         {
-            image: "2n.jpg",
+            image: "http://www.magiccorporation.com/scan/amonkhet/vf/078.jpg",
             name: "Archifielleux d'Ifnir",
             price: 0.90,
             couleurs:"Noir",
@@ -252,7 +252,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "3n.jpg",
+            image: "http://www.magiccorporation.com/scan/shadows_over_innistrad/vf/124.jpg",
             name: "Démon de tourmental",
             price: 7,
             couleurs:"Noir",
@@ -266,7 +266,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "4n.jpg",
+            image: "http://www.magiccorporation.com/scan/return_to_ravnica/vf/076.jpg",
             name: "Affliction hurlante",
             price: 2.75,
             couleurs:"Noir",
@@ -280,7 +280,7 @@ if (Couleurs.find().count() === 0) {
             stock: 6,
         },
         {
-            image: "5n.jpg",
+            image: "http://www.magiccorporation.com/scan/champions_of_kamigawa/vo/111.jpg",
             name: "Distress",
             price: 0.50,
             couleurs:"Noir",
@@ -294,7 +294,7 @@ if (Couleurs.find().count() === 0) {
             stock: 4,
         },
         {
-            image: "6n.jpg",
+            image: "http://www.magiccorporation.com/scan/visions/vo/065.jpg",
             name: "Nécrosavant",
             price: 1.50,
             couleurs:"Noir",
@@ -315,7 +315,7 @@ if (Couleurs.find().count() === 0) {
 
 
     let RougeList = [{
-            image: "gobelin_des_rues.jpg",
+            image: "http://www.magiccorporation.com/scan/return_to_ravnica/vf/098.jpg",
             name: "Gobelin des rues",
             price: 1.50,
             couleurs:"Rouge",
@@ -329,7 +329,7 @@ if (Couleurs.find().count() === 0) {
             stock: 8,
         },
         {
-            image: "2r.jpg",
+            image: "http://www.magiccorporation.com/scan/ixalan/vf/159.jpg",
             name: "Équipage batailleur",
             price: 4,
             couleurs:"Rouge",
@@ -343,7 +343,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "3r.jpg",
+            image: "http://www.magiccorporation.com/scan/exodus/vo/101.jpg",
             name: "Assaut sismique",
             price: 6,
             couleurs:"Rouge",
@@ -357,7 +357,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "4r.jpg",
+            image: "http://www.magiccorporation.com/scan/nemesis/vo/096.jpg",
             name: "Attrapeur de mogg",
             price: 16,
             couleurs:"Rouge",
@@ -371,7 +371,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "5r.jpg",
+            image: "http://www.magiccorporation.com/scan/legions/vf/114.jpg",
             name: "Cavalier skirkien",
             price: 0.30,
             couleurs:"Rouge",
@@ -385,7 +385,7 @@ if (Couleurs.find().count() === 0) {
             stock: 4,
         },
         {
-            image: "6r.jpg",
+            image: "http://www.magiccorporation.com/scan/morningtide/vf/096.jpg",
             name: "Consul pyroclaste",
             price: 0.50,
             couleurs:"Rouge",
@@ -404,7 +404,7 @@ if (Couleurs.find().count() === 0) {
     });
 
     let VertList = [{
-            image: "Guivre_epuratrice.jpg",
+            image: "http://www.magiccorporation.com/scan/hour_of_devastation/vf/135.jpg",
             name: "Guivre épuratrice",
             price: 0.40,
             couleurs:"Vert",
@@ -418,7 +418,7 @@ if (Couleurs.find().count() === 0) {
             stock: 8,
         },
         {
-            image: "2v.jpg",
+            image: "http://www.magiccorporation.com/scan/theros/vf/150.jpg",
             name: "Colosse arboricole",
             price: 0.90,
             couleurs:"Vert",
@@ -432,7 +432,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "3v.jpg",
+            image: "http://www.magiccorporation.com/scan/kaladesh/vf/148.jpg",
             name: "Début des festivités",
             price: 0.50,
             couleurs:"Vert",
@@ -446,7 +446,7 @@ if (Couleurs.find().count() === 0) {
             stock: 6,
         },
         {
-            image: "4v.jpg",
+            image: "http://www.magiccorporation.com/scan/conflux/vf/091.jpg",
             name: "Convergence d'éclats",
             price: 0.50,
             couleurs:"Vert",
@@ -460,7 +460,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "5v.jpg",
+            image: "http://www.magiccorporation.com/scan/mirrodin/living_hive.jpg",
             name: "Essaim vivant",
             price: 2,
             couleurs:"Vert",
@@ -474,7 +474,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "6v.jpg",
+            image: "http://www.magiccorporation.com/scan/scourge/vf/112.jpg",
             name: "Limon ancien",
             price: 1,
             couleurs:"Vert",
@@ -494,9 +494,9 @@ if (Couleurs.find().count() === 0) {
 
 
     let IncoloreList = [{
-            image: "black_lotus.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/black_lotus.jpg",
             name: "Lotus noir",
-            price: 12000,
+            price: 22000,
             couleurs:"Incolore",
             édition: "Alpha",
             état: "Neuf",
@@ -508,7 +508,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-        image: "2i.jpg",
+        image: "http://www.magiccorporation.com/scan/alpha/mox_emerald.jpg",
         name: "Mox Emerald",
         price: 833.68,
         couleurs:"Incolore",
@@ -522,7 +522,7 @@ if (Couleurs.find().count() === 0) {
         stock: 1,
     },
         {
-            image: "3i.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/mox_jet.jpg",
             name: "Mox Jet",
             price: 3387.74,
             couleurs:"Incolore",
@@ -536,7 +536,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "4i.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/mox_pearl.jpg",
             name: "Mox Pearl",
             price: 1824.83,
             couleurs:"Incolore",
@@ -550,7 +550,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "5i.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/mox_ruby.jpg",
             name: "Mox Ruby",
             price: 2124.19,
             couleurs:"Incolore",
@@ -564,7 +564,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "6i.jpg",
+            image: "http://www.magiccorporation.com/scan/alpha/mox_sapphire.jpg",
             name: "Mox Sapphire",
             price: 2807.45,
             couleurs:"Incolore",
@@ -583,7 +583,7 @@ if (Couleurs.find().count() === 0) {
     });
 
     let MulticoloreList = [{
-            image: "acide_sliver.jpg",
+            image: "http://www.magiccorporation.com/scan/stronghold/vo/126.jpg",
             name: "SlivoÏde acide",
             price: 4.50,
             couleurs:"Rouge Noir",
@@ -597,7 +597,7 @@ if (Couleurs.find().count() === 0) {
             stock: 4,
         },
         {
-            image: "2m.jpg",
+            image: "http://www.magiccorporation.com/scan/amonkhet/vf/201.jpg",
             name: "Aurige khenra",
             price: 0.40,
             couleurs:"Rouge Vert",
@@ -611,7 +611,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "3m.jpg",
+            image: "http://www.magiccorporation.com/scan/lorwyn/vf/249.jpg",
             name: "Horde de notions",
             price: 11,
             couleurs:"5 couleurs",
@@ -625,7 +625,7 @@ if (Couleurs.find().count() === 0) {
             stock: 2,
         },
         {
-            image: "4m.jpg",
+            image: "http://www.magiccorporation.com/scan/worldwake/vf/119.jpg",
             name: "Guivre nova",
             price: 3,
             couleurs:"Vert Blanc",
@@ -639,7 +639,7 @@ if (Couleurs.find().count() === 0) {
             stock: 3,
         },
         {
-            image: "5m.jpg",
+            image: "http://www.magiccorporation.com/scan/alara_reborn/vf/053.jpg",
             name: "Génitrice dragonne",
             price: 12,
             couleurs:"Rouge Vert",
@@ -653,7 +653,7 @@ if (Couleurs.find().count() === 0) {
             stock: 1,
         },
         {
-            image: "6m.jpg",
+            image: "http://www.magiccorporation.com/scan/mirage/vo/277.jpg",
             name: "Réflexion des blessures",
             price: 3,
             couleurs:"Rouge Blanc",

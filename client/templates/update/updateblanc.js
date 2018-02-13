@@ -1,9 +1,5 @@
 Meteor.subscribe("blanc");
 
-Template.blanc.helpers({
-    blanc: function(){return Blanc.find()}
-});
-
 Template.update.events({
 
     'submit .updateform'(event){
@@ -36,8 +32,6 @@ Template.update.events({
                 type:newtype,
                 mana:newmana,
                 stock:newstock
-
-
             }
 
         });

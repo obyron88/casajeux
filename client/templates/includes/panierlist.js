@@ -24,8 +24,8 @@ Template.blanc.events({
         var inputcount =  parseInt(event.target.countitem.value);
         // si l'input du nombre de cartes à ajouter au panier est différent de 0 ajouter dans le panier
         if(inputcount != 0){
-// insère dans la collection Panierlist
-    Panierlist.insert({
+// insère dans la collection Panierlist grace au upsert true qui permet à l'update d'inserer si aucun éléments de la collection ne correspondent au même name
+    Panierlist.update(this._id, {
         //crée le template countitem qui est égal  à la value de l'input count
         // (affiche la value inputcount dans l'html en marquant {{countitem}}
         countitem:inputcount,
@@ -44,7 +44,8 @@ Template.blanc.events({
         type:this.type,
         mana:this.mana,
         stock:this.stock
-    });
+
+    }, {upsert:true});
         }
     }
 });
@@ -56,7 +57,7 @@ Template.bleu.events({
 
         if(inputcount != 0){
 
-        Panierlist.insert({
+        Panierlist.update(this._id, {
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
@@ -71,7 +72,7 @@ Template.bleu.events({
             type:this.type,
             mana:this.mana,
             stock:this.stock
-        });
+        }, {upsert:true});
         }
     }
 });
@@ -81,7 +82,7 @@ Template.noir.events({
 
         var inputcount =  parseInt(event.target.countitem.value);
         if(inputcount != 0){
-        Panierlist.insert({
+        Panierlist.update(this._id, {
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
@@ -96,7 +97,7 @@ Template.noir.events({
             type:this.type,
             mana:this.mana,
             stock:this.stock
-        });
+        }, {upsert:true});
         }
     }
 });
@@ -107,7 +108,7 @@ Template.rouge.events({
 
         var inputcount =  parseInt(event.target.countitem.value);
         if(inputcount != 0){
-        Panierlist.insert({
+        Panierlist.update(this._id, {
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
@@ -122,7 +123,7 @@ Template.rouge.events({
             type:this.type,
             mana:this.mana,
             stock:this.stock
-        });
+        }, {upsert:true});
         }
     }
 });
@@ -133,7 +134,7 @@ Template.vert.events({
 
         var inputcount = parseInt(event.target.countitem.value);
         if(inputcount != 0){
-        Panierlist.insert({
+        Panierlist.update(this._id, {
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
@@ -148,7 +149,7 @@ Template.vert.events({
             type:this.type,
             mana:this.mana,
             stock:this.stock
-        });
+        }, {upsert:true});
         }
     }
 });
@@ -159,7 +160,7 @@ Template.incolore.events({
        // parseint transforme en int au lieu de string
         var inputcount = parseInt(event.target.countitem.value);
         if(inputcount != 0){
-        Panierlist.insert({
+        Panierlist.update(this._id, {
             countitem:inputcount,
             itemprice:Math.round((this.price*inputcount)*100)/100,
             name:this.name,
@@ -174,7 +175,7 @@ Template.incolore.events({
             type:this.type,
             mana:this.mana,
             stock:this.stock
-        });
+        }, {upsert:true});
         }
     }
 });
@@ -185,7 +186,7 @@ Template.multicolore.events({
         //parseint transforme en int au lieu de string
         var inputcount = parseInt(event.target.countitem.value);
         if (inputcount != 0) {
-            Panierlist.insert({
+            Panierlist.update(this._id, {
                 countitem: inputcount,
                 itemprice: Math.round((this.price * inputcount) * 100) / 100,
                 name: this.name,
@@ -200,7 +201,7 @@ Template.multicolore.events({
                 type: this.type,
                 mana: this.mana,
                 stock: this.stock
-            });
+            }, {upsert:true});
         }
     }
 });
@@ -241,4 +242,5 @@ Template.panierlist.events({
         });
     },
 });
+
 

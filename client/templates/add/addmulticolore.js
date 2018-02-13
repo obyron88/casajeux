@@ -1,9 +1,5 @@
 Meteor.subscribe("multicolore");
 
-Template.multicolore.helpers({
-    multicolore: function(){return Multicolore.find()}
-});
-
 Template.addmulticolore.events({
     'submit .addformmulticolore'(event) {
         event.preventDefault();
