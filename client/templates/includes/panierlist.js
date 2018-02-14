@@ -1,6 +1,7 @@
 Meteor.subscribe("panierlist");
 
 Template.panierlist.helpers({
+
      panierlist: function(){return Panierlist.find()},
     // fixe le template prixtotal à 0
     prixtotal: function () {prixtotal = 0;

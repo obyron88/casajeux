@@ -1,6 +1,9 @@
 Meteor.publish("couleurs", function(){
     return Couleurs.find();
 });
+Meteor.publish("panierlist" ,function(){
+    return Panierlist.find();
+});
 Meteor.publish("blanc", function(){
     let query      = {},
     tri = { sort: { name: 1 } };
