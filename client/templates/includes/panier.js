@@ -16,6 +16,7 @@ Template.panier.helpers({
             // le prixtotal est égal à tt les itemprice du doc additionné
             prixtotal += doc.itemprice;
         });
+        // arrondi au centième le pric total du panier
         return Math.round((prixtotal)*100)/100;
     },
 });

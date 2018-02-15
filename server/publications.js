@@ -5,6 +5,7 @@ Meteor.publish("panierlist" ,function(){
     return Panierlist.find();
 });
 Meteor.publish("blanc", function(){
+    // tri par ordre alphabétique la collection au publish
     let query      = {},
         tri = { sort: { name: 1 } };
     return Blanc.find(query, tri);

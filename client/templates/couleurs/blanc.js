@@ -1,9 +1,9 @@
 Meteor.subscribe("blanc");
-
+// crée une reactive var
 Template.blanc.onCreated(function() {
     this.sortBlanc = new ReactiveVar(1);
 });
-
+// return la collection blanc tiré par prix croissant décroissant
 Template.blanc.helpers({
     blancTrie: function () {
         var self = Template.instance();
@@ -14,11 +14,12 @@ Template.blanc.helpers({
 
 
 Template.blanc.events({
+    // tri la collection au click
     'click #sorting': function() {
         var self = Template.instance();
         self.sortBlanc.set(self.sortBlanc.get() * -1);
     },
-    // au click sur l'élément avec la classe supprimer
+    // surprime au click sur l'élément choisi
     'click .suppradmin'(event){
         event.preventDefault();
 

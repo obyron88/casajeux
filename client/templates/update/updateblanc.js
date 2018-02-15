@@ -4,7 +4,7 @@ Template.update.events({
 
     'submit .updateform'(event){
         event.preventDefault();
-
+// récupère les values des inputs au submit
         var newname = event.target.nameup.value;
         var newprice = event.target.priceup.value;
         var newimage = event.target.imageup.value;
@@ -18,7 +18,7 @@ Template.update.events({
         var newmana = event.target.manaup.value;
         var newstock = event.target.stockup.value;
 
-
+// remplace les ancienne values dans la collection blanc par les nouvelles écritent dans la inputs
         Blanc.update(this._id, {
             $set:{name:newname,
                 price:newprice,

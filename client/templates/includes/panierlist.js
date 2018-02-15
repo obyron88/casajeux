@@ -5,9 +5,9 @@ Template.panierlist.helpers({
     panierlist: function(){return Panierlist.find()},
     // fixe le template prixtotal à 0
     prixtotal: function () {prixtotal = 0;
-        //cherche dans la collection les fields avec itemprice et parcour le document avec map
+        //cherche dans la collection les fields avec itemprice et parcourt le document avec map
         Panierlist.find({}, {fields:{itemprice:1}}).map(function(doc) {
-            // le prixtotal est egal à tt les itemprice du doc additionne
+            // le prixtotal est egal à tt les itemprice du doc additionné
             prixtotal += doc.itemprice;
         });
         return Math.round(prixtotal*100)/100;
@@ -15,7 +15,7 @@ Template.panierlist.helpers({
 });
 
 
-//applique un event sur le template pizzas
+//applique un event sur le template blanc
 Template.blanc.events({
     // aplique l'event quand on submit à partir du formulaire de classe formu
     'submit .formu'(event) {

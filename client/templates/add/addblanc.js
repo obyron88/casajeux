@@ -3,7 +3,7 @@ Meteor.subscribe("blanc");
 Template.addblanc.events({
     'submit .addformblanc'(event) {
         event.preventDefault();
-
+// récupère la value des inputs au submit
         var newname = event.target.nameadd.value;
         var newprice = parseFloat(event.target.priceadd.value);
         var newimage = event.target.imageadd.value;
@@ -16,7 +16,7 @@ Template.addblanc.events({
         var newtype = event.target.typeadd.value;
         var newmana = parseInt(event.target.manaadd.value);
         var newstock = parseInt(event.target.stockadd.value);
-
+// Insère la value récupéré et les insère dans la collection Blanc
         Blanc.insert({
             name:newname,
             price:newprice,
