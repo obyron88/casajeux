@@ -29,17 +29,17 @@
                 {{/each}}
             </select>
 
-            <select class="édition">
-                <option value=''>Editions</option>
-                {{#each  édition}}
-                <option value="{{this}}" name="édition">{{this}}</option>
+            <select class="edition">
+                <option value=''>Éditions</option>
+                {{#each  edition}}
+                <option value="{{this}}" name="edition">{{this}}</option>
                 {{/each}}
             </select>
 
-            <select class="rareté">
+            <select class="rarete">
                 <option value=''>Rareté</option>
-                {{#each  rareté}}
-                <option value="{{this}}" name="rareté">{{this}}</option>
+                {{#each  rarete}}
+                <option value="{{this}}" name="rarete">{{this}}</option>
                 {{/each}}
             </select>
 
@@ -71,7 +71,7 @@
                 <img class="imgblanc" src="{{image}}"><br>
 
                 <p class="stock">En stock: {{stock}}</p>
-                <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
+                <p class="panierinfo">État: <i class="panierinfobdd">{{etat}}</i></p>
                 <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
                 <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
 

@@ -1,55 +1,55 @@
 <template name="search">
     <form class="formtri">
         <div class="row">
-        <select class="name">
-            <option class="" value=''>Nom</option>
-            {{#each  nom}}
-            <option class="" value="{{this}}" name="name">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="name">
+                <option class="" value=''>Nom</option>
+                {{#each  nom}}
+                <option class="" value="{{this}}" name="name">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="price">
-            <option value='999'>Prix</option>
-            {{#each  prix}}
-            <option value="{{this}}" name="price">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="price">
+                <option value='999'>Prix</option>
+                {{#each  prix}}
+                <option value="{{this}}" name="price">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="mana">
-            <option value='999'>Mana</option>
-            {{#each  mana}}
-            <option value="{{this}}" name="mana">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="mana">
+                <option value='999'>Mana</option>
+                {{#each  mana}}
+                <option value="{{this}}" name="mana">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="édition">
-            <option value=''>Editions</option>
-            {{#each  édition}}
-            <option value="{{this}}" name="édition">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="edition">
+                <option value=''>Éditions</option>
+                {{#each  edition}}
+                <option value="{{this}}" name="edition">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="rareté">
-            <option value=''>Rareté</option>
-            {{#each  rareté}}
-            <option value="{{this}}" name="rareté">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="rarete">
+                <option value=''>Rareté</option>
+                {{#each  rarete}}
+                <option value="{{this}}" name="rarete">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="type">
-            <option value=''>Types</option>
-            {{#each  type}}
-            <option value="{{this}}" name="type">{{this}}</option>
-            {{/each}}
-        </select>
+            <select class="type">
+                <option value=''>Types</option>
+                {{#each  type}}
+                <option value="{{this}}" name="type">{{this}}</option>
+                {{/each}}
+            </select>
 
-        <select class="premium">
-            <option value=''>Premium ?</option>
-            {{#each  foil}}
-            <option value="{{this}}" name="premium">{{this}}</option>
-            {{/each}}
-        </select>
-    </div>
+            <select class="premium">
+                <option value=''>Premium ?</option>
+                {{#each  foil}}
+                <option value="{{this}}" name="premium">{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
         <br>
         <button id="sorting">Trier par prix</button>
         <button class="searchsubmit">Rechercher</button>
@@ -64,7 +64,7 @@
                 <img class="imgblanc" src="{{image}}"><br>
 
                 <p class="stock">En stock: {{stock}}</p>
-                <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
+                <p class="panierinfo">État: <i class="panierinfobdd">{{etat}}</i></p>
                 <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
                 <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
 

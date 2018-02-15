@@ -5,7 +5,7 @@ Template.incolore.onCreated(function() {
 });
 
 Template.incolore.helpers({
-    incoloreTrié: function () {
+    incoloreTrie: function () {
         var self = Template.instance();
         var sortIncolore = self.sortIncolore.get();
         return Incolore.find({}, { sort: { price: sortIncolore } });

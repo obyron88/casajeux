@@ -8,11 +8,11 @@ Template.addmulticolore.events({
         var newprice = parseFloat(event.target.priceadd.value);
         var newimage = event.target.imageadd.value;
         var newcouleurs = event.target.couleursadd.value;
-        var newédition = event.target.éditionadd.value;
-        var newétat = event.target.étatadd.value;
+        var newedition = event.target.editionadd.value;
+        var newetat = event.target.etatadd.value;
         var newpremium = event.target.premiumadd.value;
         var newlangue = event.target.langueadd.value;
-        var newrareté = event.target.raretéadd.value;
+        var newrarete = event.target.rareteadd.value;
         var newtype = event.target.typeadd.value;
         var newmana = parseInt(event.target.manaadd.value);
         var newstock = parseInt(event.target.stockadd.value);
@@ -22,11 +22,11 @@ Template.addmulticolore.events({
             price:newprice,
             image:newimage,
             couleurs:newcouleurs,
-            édition:newédition,
-            état:newétat,
+            edition:newedition,
+            etat:newetat,
             premium:newpremium,
             langue:newlangue,
-            rareté:newrareté,
+            rarete:newrarete,
             type:newtype,
             mana:newmana,
             stock:newstock

@@ -8,28 +8,28 @@ Template.addblanc.events({
         var newprice = parseFloat(event.target.priceadd.value);
         var newimage = event.target.imageadd.value;
         var newcouleurs = event.target.couleursadd.value;
-        var newédition = event.target.éditionadd.value;
-        var newétat = event.target.étatadd.value;
+        var newedition = event.target.editionadd.value;
+        var newetat = event.target.etatadd.value;
         var newpremium = event.target.premiumadd.value;
         var newlangue = event.target.langueadd.value;
-        var newrareté = event.target.raretéadd.value;
+        var newrarete = event.target.rareteadd.value;
         var newtype = event.target.typeadd.value;
         var newmana = parseInt(event.target.manaadd.value);
         var newstock = parseInt(event.target.stockadd.value);
 
         Blanc.insert({
-                name:newname,
-                price:newprice,
-                image:newimage,
-                couleurs:newcouleurs,
-                édition:newédition,
-                état:newétat,
-                premium:newpremium,
-                langue:newlangue,
-                rareté:newrareté,
-                type:newtype,
-                mana:newmana,
-                stock:newstock
+            name:newname,
+            price:newprice,
+            image:newimage,
+            couleurs:newcouleurs,
+            edition:newedition,
+            etat:newetat,
+            premium:newpremium,
+            langue:newlangue,
+            rarete:newrarete,
+            type:newtype,
+            mana:newmana,
+            stock:newstock
 
         });
         //au submit envoie sur la page /couleurs/Blanc

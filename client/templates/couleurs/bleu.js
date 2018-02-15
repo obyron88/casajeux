@@ -5,7 +5,7 @@ Template.bleu.onCreated(function() {
 });
 
 Template.bleu.helpers({
-    bleuTrié: function () {
+    bleuTrie: function () {
         var self = Template.instance();
         var sortBleu = self.sortBleu.get();
         return Bleu.find({}, { sort: { price: sortBleu } });

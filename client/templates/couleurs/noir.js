@@ -5,7 +5,7 @@ Template.noir.onCreated(function() {
 });
 
 Template.noir.helpers({
-    noirTrié: function () {
+    noirTrie: function () {
         var self = Template.instance();
         var sortNoir = self.sortNoir.get();
         return Noir.find({}, { sort: { price: sortNoir } });

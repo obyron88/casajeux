@@ -1,34 +1,29 @@
 <template name="update">
-                <div class="jumbotron">
-
-                    <form class="updateform" method="post">
-                        <div class="row">
-                        <div class="col-xs-8 col-sm-6 col-md-4">
-                       <p>Name : </p> <input class="up" name="nameup" value="{{name}}">
-                        <p>Price : </p><input class="up" name="priceup"  value="{{price}}">
-                        <p>Image : </p><input class="up" name="imageup"  value="{{image}}">
-                        <p>Couleurs : </p> <input class="up" name="couleursup" value="{{couleurs}}">
-                        </div>
-                        <div class="col-xs-8 col-sm-6 col-md-4">
-                        <p>Édition : </p><input class="up" name="éditionup"  value="{{édition}}">
-                        <p>État : </p><input class="up" name="étatup"  value="{{état}}">
-                        <p>Premium : </p> <input class="up" name="premiumup" value="{{premium}}">
-                        <p>Langue : </p><input class="up" name="langueup"  value="{{langue}}">
-                        </div>
-                        <div class="col-xs-8 col-sm-6 col-md-4">
-                        <p>Rareté : </p><input class="up" name="raretéup"  value="{{rareté}}">
-                        <p>Type : </p> <input class="up" name="typeup" value="{{type}}">
-                        <p>Mana : </p><input class="up" name="manaup"  value="{{mana}}">
-                        <p>Stock : </p><input class="up" name="stockup"  value="{{stock}}">
-                        </div>
-                    </div>
-                        <br>
-                        <input class="updatesub" type="submit" name="updatesub" value="Update !">
-                        <a href="{{pathFor route='couleurs'}}" class="retour">Retour</a>
-
-                    </form>
-
-
-                    </div>
-
+    <div class="jumbotron">
+        <form class="updateform" method="post">
+            <div class="row">
+                <div class="col-xs-8 col-sm-6 col-md-4">
+                    <p>Name : </p> <input class="up" name="nameup" value="{{name}}">
+                    <p>Price : </p><input class="up" name="priceup"  value="{{price}}">
+                    <p>Image : </p><input class="up" name="imageup"  value="{{image}}">
+                    <p>Couleurs : </p> <input class="up" name="couleursup" value="{{couleurs}}">
+                </div>
+                <div class="col-xs-8 col-sm-6 col-md-4">
+                    <p>Édition : </p><input class="up" name="editionup"  value="{{edition}}">
+                    <p>État : </p><input class="up" name="etatup"  value="{{etat}}">
+                    <p>Premium : </p> <input class="up" name="premiumup" value="{{premium}}">
+                    <p>Langue : </p><input class="up" name="langueup"  value="{{langue}}">
+                </div>
+                <div class="col-xs-8 col-sm-6 col-md-4">
+                    <p>Rarete : </p><input class="up" name="rareteup"  value="{{rarete}}">
+                    <p>Type : </p> <input class="up" name="typeup" value="{{type}}">
+                    <p>Mana : </p><input class="up" name="manaup"  value="{{mana}}">
+                    <p>Stock : </p><input class="up" name="stockup"  value="{{stock}}">
+                </div>
+            </div>
+            <br>
+            <input class="updatesub" type="submit" name="updatesub" value="Update !">
+            <a href="{{pathFor route='couleurs'}}" class="retour">Retour</a>
+        </form>
+    </div>
 </template>

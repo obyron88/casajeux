@@ -9,11 +9,11 @@ Template.update.events({
         var newprice = event.target.priceup.value;
         var newimage = event.target.imageup.value;
         var newcouleurs = event.target.couleursup.value;
-        var newédition = event.target.éditionup.value;
-        var newétat = event.target.étatup.value;
+        var newedition = event.target.editionup.value;
+        var newetat = event.target.etatup.value;
         var newpremium = event.target.premiumup.value;
         var newlangue = event.target.langueup.value;
-        var newrareté = event.target.raretéup.value;
+        var newrarete = event.target.rareteup.value;
         var newtype = event.target.typeup.value;
         var newmana = event.target.manaup.value;
         var newstock = event.target.stockup.value;
@@ -24,11 +24,11 @@ Template.update.events({
                 price:newprice,
                 image:newimage,
                 couleurs:newcouleurs,
-                édition:newédition,
-                état:newétat,
+                edition:newedition,
+                etat:newetat,
                 premium:newpremium,
                 langue:newlangue,
-                rareté:newrareté,
+                rarete:newrarete,
                 type:newtype,
                 mana:newmana,
                 stock:newstock

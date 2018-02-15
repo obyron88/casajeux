@@ -5,7 +5,7 @@ Template.rouge.onCreated(function() {
 });
 
 Template.rouge.helpers({
-    rougeTrié: function () {
+    rougeTrie: function () {
         var self = Template.instance();
         var sortRouge = self.sortRouge.get();
         return Rouge.find({}, { sort: { price: sortRouge } });

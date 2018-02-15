@@ -5,7 +5,7 @@ Template.multicolore.onCreated(function() {
 });
 
 Template.multicolore.helpers({
-    multicoloreTrié: function () {
+    multicoloreTrie: function () {
         var self = Template.instance();
         var sortMulticolore = self.sortMulticolore.get();
         return Multicolore.find({}, { sort: { price: sortMulticolore } });
@@ -20,7 +20,7 @@ Template.multicolore.events({
     'click .suppradmin'(event){
         event.preventDefault();
 
-       Multicolore.remove({
+        Multicolore.remove({
             _id:this._id
         })
     },

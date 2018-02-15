@@ -6,7 +6,7 @@ Meteor.publish("panierlist" ,function(){
 });
 Meteor.publish("blanc", function(){
     let query      = {},
-    tri = { sort: { name: 1 } };
+        tri = { sort: { name: 1 } };
     return Blanc.find(query, tri);
 });
 Meteor.publish("bleu", function(){

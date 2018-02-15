@@ -1,24 +1,24 @@
 <template name="panierlist">
     <div class="jumbotron">
         <div class="row">
-                    <h1 class="titrepanier">Panier</h1>
-                    {{>panier}}
-                    <form class="passercommande"  method="post">
-                    {{#each panierlist}}
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <h3><u>{{name}}</u></h3>
-                     <img class="imgblanc" src="{{image}}">
-                            <p class="panierinfo">Prix unitaire: <i class="panierinfobdd">{{price}}€</i></p>
-                            <p class="panierinfo">En stock: <i class="panierinfobdd">{{stock}}</i></p>
-                            <p class="panierinfo">État: <i class="panierinfobdd">{{état}}</i></p>
-                            <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
-                            <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
-                            <h2>{{itemprice}}€</h2>
-                        <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="{{countitem}}">
-                            <img class="supprimer" name="supprimer" src="/images/supprimer.png">
-                        </div>
-                    {{/each}}
-                    </form>
+            <h1 class="titrepanier">Panier</h1>
+            {{>panier}}
+            <form class="passercommande"  method="post">
+                {{#each panierlist}}
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <h3><u>{{name}}</u></h3>
+                    <img class="imgblanc" src="{{image}}">
+                    <p class="panierinfo">Prix unitaire: <i class="panierinfobdd">{{price}}€</i></p>
+                    <p class="panierinfo">En stock: <i class="panierinfobdd">{{stock}}</i></p>
+                    <p class="panierinfo">État: <i class="panierinfobdd">{{etat}}</i></p>
+                    <p class="panierinfo">Langue: <i class="panierinfobdd">{{langue}}</i></p>
+                    <p class="panierinfo">Premium: <i class="panierinfobdd">{{premium}}</i></p>
+                    <h2>{{itemprice}}€</h2>
+                    <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="{{countitem}}">
+                    <img class="supprimer" name="supprimer" src="/images/supprimer.png">
+                </div>
+                {{/each}}
+            </form>
         </div>
         <h3 class="totalcommande">Total de la commande <b>{{prixtotal}} €</b></h3>
         <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>

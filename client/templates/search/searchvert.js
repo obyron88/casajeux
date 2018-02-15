@@ -10,15 +10,15 @@ Template.searchvert.events({
     },
 
     'submit .formtri': function(e){
-        // au submit du form .formtri récupère les values des inputs
+        // au submit du form .formtri recupère les values des inputs
         e.preventDefault();
         // prevent default reste sur la même page à l'action
-        // crée manafilter qui correspond à la value récupéré de l'input de classe mana (parseInt transforme la value en integer)
+        // cree manafilter qui correspond à la value recupere de l'input de classe mana (parseInt transforme la value en integer)
         Session.set('manaFilter', parseInt($('.mana').val()));
         Session.set('priceFilter', parseFloat($('.price').val()));
-        Session.set('raretéFilter', $('.rareté').val());
+        Session.set('rareteFilter', $('.rarete').val());
         Session.set('typeFilter', $('.type').val());
-        Session.set('éditionFilter', $('.édition').val());
+        Session.set('editionFilter', $('.edition').val());
         Session.set('premiumFilter', $('.premium').val());
         Session.set('nameFilter', $('.name').val());
 
@@ -26,26 +26,26 @@ Template.searchvert.events({
 });
 
 Template.searchvert.helpers({
-    // _.uniq évite les doublons
+    // _.uniq evite les doublons
     type: function (){ return _.uniq(Vert.find({}, {
-        // sort tri par ordre alphabétique avec 1 (-1 tri ordre inversé)/ fields cherche dans la collection les fields type
+        // sort tri par ordre alphabetique avec 1 (-1 tri ordre inverse)/ fields cherche dans la collection les fields type
         sort: {type: 1}, fields: {type: true}
     }).map(function(x) {
         return x.type;
     }), true);
     },
 
-    édition: function (){ return _.uniq(Vert.find({}, {
-        sort: {édition: 1}, fields: {édition: true}
+    edition: function (){ return _.uniq(Vert.find({}, {
+        sort: {edition: 1}, fields: {edition: true}
     }).map(function(x) {
-        return x.édition;
+        return x.edition;
     }), true);
     },
 
-    rareté: function (){ return _.uniq(Vert.find({}, {
-        sort: {rareté: 1}, fields: {rareté: true}
+    rarete: function (){ return _.uniq(Vert.find({}, {
+        sort: {rarete: 1}, fields: {rarete: true}
     }).map(function(x) {
-        return x.rareté;
+        return x.rarete;
     }), true);
     },
 
@@ -80,30 +80,30 @@ Template.searchvert.helpers({
     resultsvert: function() {
         var self = Template.instance();
         var sortVert = self.sortVert.get();
-// récupère le session.set et le passe en variable (pour pouvoir s'en servir dans le helpers)
+// recupère le session.set et le passe en variable (pour pouvoir s'en servir dans le helpers)
         var manav = Session.get('manaFilter');
         var pricev = Session.get('priceFilter');
-        var raretév = Session.get('raretéFilter');
+        var raretev = Session.get('rareteFilter');
         var typev =  Session.get('typeFilter');
-        var éditionv = Session.get('éditionFilter');
+        var editionv = Session.get('editionFilter');
         var premiumv = Session.get('premiumFilter');
         var namev = Session.get('nameFilter');
         var selector = {};
-// si la valeur récupéré est différente de "" ou 999 select mana = la valeur récupéré
+// si la valeur recupere est differente de "" ou 999 select mana = la valeur recupere
         if (manav != '999') {
             selector.mana = manav;
         }
         if (pricev != '999') {
             selector.price = pricev;
         }
-        if (raretév != "") {
-            selector.rareté = raretév;
+        if (raretev != "") {
+            selector.rarete = raretev;
         }
         if (typev != "") {
             selector.type = typev;
         }
-        if (éditionv != "") {
-            selector.édition = éditionv;
+        if (editionv != "") {
+            selector.edition = editionv;
         }
         if (premiumv != "") {
             selector.premium = premiumv;
@@ -111,7 +111,7 @@ Template.searchvert.helpers({
         if (namev != "") {
             selector.name = namev;
         }
-// return les champs valides sélectionnés par selector
+// return les champs valides selectionnes par selector
         return Vert.find(selector, { sort: { price: sortVert }})
     },
 

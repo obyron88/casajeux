@@ -5,7 +5,7 @@ Template.blanc.onCreated(function() {
 });
 
 Template.blanc.helpers({
-    blancTrié: function () {
+    blancTrie: function () {
         var self = Template.instance();
         var sortBlanc = self.sortBlanc.get();
         return Blanc.find({}, { sort: { price: sortBlanc } });

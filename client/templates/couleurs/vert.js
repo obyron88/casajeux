@@ -5,7 +5,7 @@ Template.vert.onCreated(function() {
 });
 
 Template.vert.helpers({
-    vertTrié: function () {
+    vertTrie: function () {
         var self = Template.instance();
         var sortVert = self.sortVert.get();
         return Vert.find({}, { sort: { price: sortVert } });

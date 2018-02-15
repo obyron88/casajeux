@@ -5,13 +5,12 @@
         {{#if isInRole 'admin'}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-        <h2>Welcome Admin !</h2>
-                </div>
+                <h2>Welcome Admin !</h2>
+            </div>
         </div>
         {{/if}}
-    {{#each couleurs}}
-            <a href="/couleurs/{{name}}"><img class="imgcouleurs" src="/images/{{image}}"></a>
-    {{/each}}
-
+        {{#each couleurs}}
+        <a href="/couleurs/{{name}}"><img class="imgcouleurs" src="/images/{{image}}"></a>
+        {{/each}}
     </div>
 </template>
