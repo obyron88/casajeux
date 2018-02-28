@@ -3,8 +3,8 @@
         <div class="row">
             <h1 class="titrepanier">Panier</h1>
             {{>panier}}
-            <form class="passercommande"  method="post">
                 {{#each panierlist}}
+            <form class="passercommande"  method="post">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <h3><u>{{name}}</u></h3>
                     <img class="imgblanc" src="{{image}}">
@@ -16,9 +16,15 @@
                     <h2>{{itemprice}}€</h2>
                     <input class="inputcompt {{_id}}" name="countitem" type="number" min="0" max="{{stock}}" value="{{countitem}}">
                     <img class="supprimer" name="supprimer" src="/images/supprimer.png">
+                    {{#if isInRole 'admin'}}
+                    <br>
+                    <br>
+                    <input class="stockup" type="submit" name="stockup" value="Mettre les stocks à jour">
+                    {{/if}}
                 </div>
-                {{/each}}
             </form>
+                {{/each}}
+
         </div>
         <h3 class="totalcommande">Total de la commande <b>{{prixtotal}} €</b></h3>
         <a href="{{pathFor route='couleurs'}}" class="retour">Continuer la commande</a>

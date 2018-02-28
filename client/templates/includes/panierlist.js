@@ -243,5 +243,194 @@ Template.panierlist.events({
         });
     },
 });
+// met les stocks à jour en soustrayant le nombre de cartes commandé dans le panier
+//au stock de la collection Blanc au click sur l'input "mettre les stocks à jour"
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
 
+        Blanc.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Bleu.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Incolore.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Multicolore.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Noir.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Rouge.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+
+        Vert.update(this._id, {
+            stock:this.stock - stockupdate,
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            couleurs:this.couleurs,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana
+
+
+        })
+    }
+});
+// met les stocks à jour en soustrayant le nombre de cartes commandé dans le panier
+//au stock de la collection Panierlist au click sur l'input "mettre les stocks à jour"
+Template.panierlist.events({
+    'submit .passercommande'(event){
+        event.preventDefault();
+        var stockupdate = event.target.countitem.value;
+        var inputcount = parseInt($("."+this._id+"").val());
+// va update dans la collection Panierlist à partir de l'id toute les infos ci dessous au click sur l'input
+        Panierlist.update(this._id, {
+            countitem:inputcount,
+            itemprice:Math.round((this.price*inputcount)*100)/100,
+            name:this.name,
+            image:this.image,
+            price:this.price,
+            couleur:this.couleur,
+            edition:this.edition,
+            etat:this.etat,
+            premium:this.premium,
+            langue:this.langue,
+            rarete:this.rarete,
+            type:this.type,
+            mana:this.mana,
+            stock:this.stock - stockupdate,
+            _id:this._id
+        })
+    }
+});
 

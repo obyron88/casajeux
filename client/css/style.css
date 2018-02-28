@@ -299,3 +299,19 @@ select option {
     border: 1px solid #e3e3e3;
     border-radius: 3px;
 }
+.stockup{
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    border: saddlebrown double;
+    text-decoration: none;
+    background: -webkit-linear-gradient(darkgoldenrod, gold, darkgoldenrod);
+    font-weight: bold;
+    font-family: Dingbats;
+}
+.stockup:hover{
+    text-decoration: none;
+    color: black;
+    border: solid 3px grey;
+}
